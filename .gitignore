@@ -1,0 +1,13 @@
+# Raw downloads: BMC/BEST PDFs are publisher copyright and must not be redistributed.
+# Re-create with: python analysis/fetch_data.py --full
+data/raw/*
+!data/raw/manifest.json
+data/processed/_ocr_tmp.png
+__pycache__/
+.pytest_cache/
+*.pyc
+app/node_modules/
+app/dist/
+app/*.tsbuildinfo
+.DS_Store
+HackAMatch_CityPulse_Problem_Statement.pdf

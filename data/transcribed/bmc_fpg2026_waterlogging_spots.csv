@@ -1,0 +1,98 @@
+record_id,ward_published,ward_legacy,sr_no_published,location_published,project_category,dewatering_pumps,pump_capacity_m3hr_listed,pdf_file,pdf_page_index,section_header_count,transcription_note
+FPG-C-1,C,C,1,Gol deol temple,Low lying area,1,480,Ward_C.pdf,1,,section header gives no count
+FPG-D-1,D,D,1,Nana Chowk-1,Works in Planning Stage,2,250,Ward_D.pdf,1,1,two pumps but one capacity value printed
+FPG-E-1,E,E,1,"Gate No 4, Nair Hospital",,,,Ward_E.pdf,1,1,
+FPG-FS-1,F/S,F/S,1,"Jagannath Bhatankar Marg, Elphinstone (East/West)",Works in Planning Stage,1,240,Ward_FS.pdf,1,1,
+FPG-FN-1,F/N,F/N,1,Vacchraj Lane,,1,480,Ward_FN.pdf,1,5,
+FPG-FN-2,F/N,F/N,2,Wadala Railway Station,,2,480,Ward_FN.pdf,1,5,two pumps but one capacity value printed
+FPG-FN-3,F/N,F/N,3,"Bank of Baroda, R A Kidwai Road",,2,240,Ward_FN.pdf,1,5,two pumps but one capacity value printed
+FPG-FN-4,F/N,F/N,4,"Sakkar Panchayat, R A Kidwai Road",,,,Ward_FN.pdf,1,5,
+FPG-FN-5,F/N,F/N,5,"Mukhyadhyap Bhavan, Road no. 24",,3,240,Ward_FN.pdf,1,5,three pumps but one capacity value printed
+FPG-GS-1,G/S,G/S,1,"Dr E Moses Road, Worli Naka",,2,250,Ward_GS.pdf,1,1,two pumps but one capacity value printed
+FPG-HE-1,H/E,H/E,1,Khar Subway,,1,250,Ward_HE.pdf,1,3,
+FPG-HE-2,H/E,H/E,2,"Ashok Nagar, Krishna Nagar Culvert, St Anthony Road",,1,480,Ward_HE.pdf,1,3,
+FPG-HE-3,H/E,H/E,3,"Dani Corporate Park, CST Road",,,,Ward_HE.pdf,1,3,
+FPG-HW-1,H/W,H/W,1,"Hill Road, Bandra West",,,,Ward_HW.pdf,1,1,
+FPG-KE-1,K/South & K/North,K/E,1,M C Chagla Subway,,1,250,Ward_KE.pdf,1,1,published under the new K/South & K/North wards; mapped to legacy K/E
+FPG-KW-1,K/W,K/W,1,Andheri Subway,,3,250;1000;1000,Ward_KW.pdf,1,6,
+FPG-KW-2,K/W,K/W,2,"Nobel Medical, near Veera Desai Road",,,,Ward_KW.pdf,1,6,
+FPG-KW-3,K/W,K/W,3,"Andheri Market, S V Road",,2,240,Ward_KW.pdf,1,6,two pumps but one capacity value printed
+FPG-KW-4,K/W,K/W,4,Irla Darshan Society,,1,480,Ward_KW.pdf,1,6,
+FPG-KW-5,K/W,K/W,5,"Priti Apartment, near Versova Cemetery",,1,125,Ward_KW.pdf,1,6,
+FPG-KW-6,K/W,K/W,6,Teachers Colony,,1,125,Ward_KW.pdf,1,6,
+FPG-L-1,L,L,1,"Kapadia Nagar Society, CST Road, Building 15",,2,480;480,Ward_L.pdf,2,17,
+FPG-L-2,L,L,2,"Kurla Depot Junction, Kurla West",,,,Ward_L.pdf,2,17,
+FPG-L-3,L,L,3,Khairani Road,,,,Ward_L.pdf,2,17,
+FPG-L-4,L,L,4,"Upstream side of AGLR, near Sakinaka Metro Stration",,,,Ward_L.pdf,2,17,
+FPG-L-5,L,L,5,"A1 Barkat School, Ramdeo Peer Marg, Vinoba Bhave Nagar",,1,125,Ward_L.pdf,2,17,
+FPG-L-6,L,L,6,Sakinaka Metro Station,,2,1000;1000,Ward_L.pdf,2,17,
+FPG-L-7,L,L,7,"Nahar Amrut Shakti Road, near Khairani Road Junction",,1,125,Ward_L.pdf,2,17,
+FPG-L-8,L,L,8,"Sonapur Signal, LBS Road",,,,Ward_L.pdf,3,17,
+FPG-L-9,L,L,9,"Samarth Nagar, Chunabhatti",,2,1000;250,Ward_L.pdf,3,17,
+FPG-L-10,L,L,10,Kurla Railway Station,,1,240,Ward_L.pdf,3,17,
+FPG-L-11,L,L,11,Surve Chowk,,1,250,Ward_L.pdf,3,17,
+FPG-L-12,L,L,12,"Kurla Court, LBS Road",,,,Ward_L.pdf,3,17,pump cells left blank in source
+FPG-L-13,L,L,13,Pant Walavalkar School,,1,250,Ward_L.pdf,3,17,
+FPG-L-14,L,L,14,"Vivekanand School, Shivsrushti Road",,,,Ward_L.pdf,3,17,pump cells left blank in source
+FPG-L-15,L,L,15,Kale Marg,,,,Ward_L.pdf,3,17,pump cells left blank in source
+FPG-L-16,L,L,16,Bramhanwadi Pumping Station,,1,125,Ward_L.pdf,3,17,
+FPG-L-17,L,L,17,"Gulmohar Marg, Bhaktidham",,,,Ward_L.pdf,3,17,pump cells left blank in source
+FPG-ME-1,M/E,M/E,1,"Mankhurd Sainath Madal, Mahatma Phule Nagar",,,,Ward_ME.pdf,1,5,
+FPG-ME-2,M/E,M/E,2,"Mankhurd Junction to Maharashtra Nagar, below railway bridge",,,,Ward_ME.pdf,1,5,
+FPG-ME-3,M/E,M/E,3,"Near Eastern Way, Twin Tunnel",,,,Ward_ME.pdf,1,5,
+FPG-ME-4,M/E,M/E,4,"In front of TIFR Colony, V N Purav Marg",,,,Ward_ME.pdf,1,5,
+FPG-ME-5,M/E,M/E,5,"Mahatma Phule Nagar, near Mankhurd Railway Station at Sion Panvel Highway",,2,250;250,Ward_ME.pdf,1,5,
+FPG-MW-1,M/W,M/W,1,"Postal Colony, Chembur (Road No.1)",,1,250,Ward_MW.pdf,1,4,
+FPG-MW-2,M/W,M/W,2,Postal Colony (Road No. 2),,1,250,Ward_MW.pdf,1,4,
+FPG-MW-3,M/W,M/W,3,"Tembhe Bridge, Chembur",,2,250,Ward_MW.pdf,1,4,two pumps but one capacity value printed
+FPG-MW-4,M/W,M/W,4,Maharashtra Nagar Subway,,,,Ward_MW.pdf,1,4,
+FPG-N-1,N,N,1,"Shastri Nagar, Vidyavihar (East)",,,,Ward_N.pdf,1,15,
+FPG-N-2,N,N,2,Ramabai Nagar,,1,250,Ward_N.pdf,1,15,
+FPG-N-3,N,N,3,Savitribai Phule Nagar,,,,Ward_N.pdf,1,15,
+FPG-N-4,N,N,4,Vikroli Parksite,,,,Ward_N.pdf,1,15,
+FPG-N-5,N,N,5,"Welocme Hotel, Shradhand Road, Ghatkopar West",,,,Ward_N.pdf,1,15,
+FPG-N-6,N,N,6,"Meghraj Junction, M G Road Junction, Ghatkopar",,,,Ward_N.pdf,1,15,
+FPG-N-7,N,N,7,"Haripada, Quadari Chawl, Ghatkopar West",,1,125,Ward_N.pdf,1,15,
+FPG-N-8,N,N,8,"LBS Road as NSS Junction, Ghatkopar West",,,,Ward_N.pdf,1,15,
+FPG-N-9,N,N,9,"Fatima School, Jolly Gymkhana, Ghatkopar West",,,,Ward_N.pdf,1,15,
+FPG-N-10,N,N,10,"Kamraj Nagar, Municipal School, Ghatkopar East",,1,125,Ward_N.pdf,1,15,
+FPG-N-11,N,N,11,"Valabhbaug Extension Lane, Cross Road i.e. Sai Baba, Mahavir Lane, Bhavani Lane, Ghatkopar West",,1,125,Ward_N.pdf,1,15,
+FPG-N-12,N,N,12,"Vidyavihar Station, Near Ticket Booking Office, Vidyavihar West",,1,125,Ward_N.pdf,1,15,
+FPG-N-13,N,N,13,"Devkabai Chawl, Dhruv Raj Singh Marg, Ghatkopar West",,1,125,Ward_N.pdf,1,15,
+FPG-N-14,N,N,14,"Near ONGC Colony, ONGC Marg, Vidyavihar East",,,,Ward_N.pdf,1,15,
+FPG-N-15,N,N,15,"Shastri Nagar, Vidyavihar East",,2,480,Ward_N.pdf,1,15,same place name as FPG-N-1; two pumps but one capacity value printed
+FPG-PE-1,P/East,P/N,1,"Pushpa Park, Malad (E)",,1,125,Ward_PN.pdf,1,4,published under new P/East ward; mapped to legacy P/N
+FPG-PE-2,P/East,P/N,2,Narayan Shukla Chawl,,,,Ward_PN.pdf,1,4,published under new P/East ward; mapped to legacy P/N
+FPG-PE-3,P/East,P/N,3,"Kurar Nullah, Tanaji Nagar, Malad ( E)",,,,Ward_PN.pdf,1,4,published under new P/East ward; mapped to legacy P/N
+FPG-PE-4,P/East,P/N,4,Malad Subway (E),,2,480;480,Ward_PN.pdf,1,4,published under new P/East ward; mapped to legacy P/N
+FPG-PE-5,P/East,P/N,5,"Raviya Budhiya Chawl, Appapada",,1,125,Ward_PN.pdf,1,4,header says 4 but 5 rows listed; mapped to legacy P/N
+FPG-PW-1,P/West,P/N,1,Lotus Building,,,,Ward_PN.pdf,8,4,published under new P/West ward; mapped to legacy P/N
+FPG-PW-2,P/West,P/N,2,Malad Subway (West),,4,,Ward_PN.pdf,8,4,four pumps listed; capacity cell blank
+FPG-PW-3,P/West,P/N,3,Gangabawdi Malad (W),,1,125,Ward_PN.pdf,8,4,
+FPG-PW-4,P/West,P/N,4,"Mamu Gally Shivaji nagar Madh Malad (W)",,1,125,Ward_PN.pdf,8,4,
+FPG-PS-1,P/S,P/S,1,"Dhakad Compound, Goregaon E",,,,Ward_PS.pdf,1,4,
+FPG-PS-2,P/S,P/S,2,Near Ridhhi Siddhi Nullah,,,,Ward_PS.pdf,1,4,
+FPG-PS-3,P/S,P/S,3,"Oberoi Mall Junction, Goregaon (W)",Planning Stage,1,250,Ward_PS.pdf,1,4,
+FPG-PS-6,P/S,P/S,6,"Shastri Nagar Rd No.01, Goregaon (W)",Planning Stage,,,Ward_PS.pdf,1,4,row numbered 6 in source although only 4 rows exist
+FPG-RC-1,R/C,R/C,1,"Gavand Compound, Shimpoli",To be Tackeled Other Agency,,,Ward_RC.pdf,1,1,
+FPG-RN-1,R/N,R/N,1,"Vaishali Nagar, Dahisar East",,,,Ward_RN.pdf,1,5,
+FPG-RN-2,R/N,R/N,2,"Dahisar Gaothan, Dahisar West",,3,250;480,Ward_RN.pdf,1,5,three pumps but two capacity values printed
+FPG-RN-3,R/N,R/N,3,Aanand Nagar,,2,125,Ward_RN.pdf,1,5,two pumps but one capacity value printed
+FPG-RN-4,R/N,R/N,4,Pearl Apartment,,1,125,Ward_RN.pdf,1,5,
+FPG-RN-5,R/N,R/N,5,Patil Wadi,,1,125,Ward_RN.pdf,1,5,
+FPG-RN-6,R/N,R/N,6,Raj Nagar,,1,125,Ward_RN.pdf,1,5,header says 5 but 6 rows listed
+FPG-RS-1,R/S,R/S,1,"Maharashtra Nagar 1, kandivali West",,2,250;250,Ward_RS.pdf,1,6,
+FPG-RS-2,R/S,R/S,2,"Jijamata Nagar 1, Kandivali West",,2,250;125,Ward_RS.pdf,1,6,
+FPG-RS-3,R/S,R/S,3,"Maruti Nagar, Kandivali West",,2,125;125,Ward_RS.pdf,1,6,
+FPG-RS-4,R/S,R/S,4,"Dahanukar Wadi Cemetry Road, Kandivali West",,3,3000;3000;500,Ward_RS.pdf,1,6,
+FPG-RS-5,R/S,R/S,5,"Hanuman Nagar, Kandivali East",,,,Ward_RS.pdf,1,6,
+FPG-RS-6,R/S,R/S,6,"Poisar Subway, Kandivali",,1,125,Ward_RS.pdf,1,6,
+FPG-S-1,S,S,1,Bhandup Railway Station,,2,480,Ward_S.pdf,1,7,two pumps but one capacity value printed
+FPG-S-2,S,S,2,Bhandup Village Road,,,,Ward_S.pdf,1,7,
+FPG-S-3,S,S,3,"Huma Cinnema LBS Road, Bhandup West",,,,Ward_S.pdf,1,7,
+FPG-S-4,S,S,4,"Gujarati Cementry at Sonapur Road, LBS, Bhandup West",,,,Ward_S.pdf,1,7,
+FPG-S-5,S,S,5,"Kangutkar Chowk, Tagor Nagar",,,,Ward_S.pdf,1,7,
+FPG-S-6,S,S,6,"Sunrise Building, Lake Road",,,,Ward_S.pdf,1,7,
+FPG-S-7,S,S,7,"Kannamwar Nagar BMC, Vikhroli East",,,,Ward_S.pdf,1,7,
+FPG-T-1,T,T,1,"Jain Mandir Junction, Mulund West",,,,Ward_T.pdf,1,2,
+FPG-T-2,T,T,2,"Mehul Circle, J N Road, Mulund West",,,,Ward_T.pdf,1,2,

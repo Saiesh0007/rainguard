@@ -1,0 +1,9 @@
+# Analysis pipeline (Python 3.11+; developed on 3.14)
+pandas>=2.2
+numpy>=2.0
+scipy>=1.13
+shapely>=2.0
+matplotlib>=3.9
+pymupdf>=1.24
+requests>=2.32
+pytest>=8.0

@@ -1,0 +1,111 @@
+{
+  "ward_level": {
+    "n_wards": 24,
+    "target": "incident_class (1-7)",
+    "class_counts": {
+      "2": 1,
+      "3": 4,
+      "4": 4,
+      "5": 3,
+      "6": 5,
+      "7": 7
+    },
+    "models": {
+      "B0_median": {
+        "features": [],
+        "loo_mae_classes": 1.917,
+        "loo_spearman": null,
+        "within_one_class": 0.333,
+        "mae_change_vs_B0": 0.0
+      },
+      "B1_population": {
+        "features": [
+          "log_pop"
+        ],
+        "loo_mae_classes": 0.732,
+        "loo_spearman": 0.818,
+        "within_one_class": 0.875,
+        "permutation_p_value": 0.001,
+        "mae_change_vs_B0": -1.185
+      },
+      "B2_population_area": {
+        "features": [
+          "log_pop",
+          "log_area"
+        ],
+        "loo_mae_classes": 0.751,
+        "loo_spearman": 0.812,
+        "within_one_class": 0.958,
+        "permutation_p_value": 0.001,
+        "mae_change_vs_B0": -1.166
+      },
+      "M1_plus_terrain": {
+        "features": [
+          "log_pop",
+          "log_area",
+          "median_elevation_m",
+          "low_lying_share"
+        ],
+        "loo_mae_classes": 0.724,
+        "loo_spearman": 0.817,
+        "within_one_class": 0.917,
+        "permutation_p_value": 0.001,
+        "mae_change_vs_B0": -1.193
+      },
+      "M2_plus_listed_spots": {
+        "features": [
+          "log_pop",
+          "log_area",
+          "median_elevation_m",
+          "low_lying_share",
+          "log_spots"
+        ],
+        "loo_mae_classes": 0.751,
+        "loo_spearman": 0.812,
+        "within_one_class": 0.875,
+        "permutation_p_value": 0.001,
+        "mae_change_vs_B0": -1.166
+      }
+    },
+    "spearman_population_vs_class": {
+      "rho": 0.835,
+      "p": 0.0
+    },
+    "spearman_listed_spots_vs_class": {
+      "rho": 0.595,
+      "p": 0.0022
+    }
+  },
+  "location_terrain_case_control": {
+    "point_or_street": {
+      "n": 92,
+      "tpi_pct_in_ward": {
+        "median": 0.443,
+        "mean": 0.458,
+        "share_below_0.5": 0.565,
+        "wilcoxon_p_vs_0.5": 0.17369
+      },
+      "elev_pct_in_ward": {
+        "median": 0.509,
+        "mean": 0.453,
+        "share_below_0.5": 0.478,
+        "wilcoxon_p_vs_0.5": 0.0717
+      }
+    },
+    "area_only": {
+      "n": 144,
+      "tpi_pct_in_ward": {
+        "median": 0.536,
+        "mean": 0.518,
+        "share_below_0.5": 0.479,
+        "wilcoxon_p_vs_0.5": 0.40579
+      },
+      "elev_pct_in_ward": {
+        "median": 0.49,
+        "mean": 0.534,
+        "share_below_0.5": 0.514,
+        "wilcoxon_p_vs_0.5": 0.16387
+      }
+    }
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "inputs": {
+    "bmc_fpg2026_rows": 97,
+    "best_annex_rows": 84,
+    "mtp_rows": 92
+  },
+  "excluded": [
+    {
+      "record": "MTP-24",
+      "text": "Traffic from North side",
+      "reason": "not a location - continuation of MTP-23"
+    },
+    {
+      "record": "MTP-35",
+      "text": "Dadar Traffic",
+      "reason": "not a specific location"
+    }
+  ],
+  "ward_reassigned": [
+    {
+      "record": "MTP-31",
+      "heading_ward": "G/S",
+      "geocoded_ward": "G/N"
+    },
+    {
+      "record": "MTP-85",
+      "heading_ward": "P/S",
+      "geocoded_ward": "R/S"
+    }
+  ],
+  "within_source_duplicates": [
+    {
+      "records": [
+        "BEST-42",
+        "BEST-43"
+      ],
+      "reason": "identical normalised text in same source and ward"
+    },
+    {
+      "records": [
+        "FPG-N-1",
+        "FPG-N-15"
+      ],
+      "reason": "identical normalised text in same source and ward"
+    },
+    {
+      "records": [
+        "MTP-3",
+        "MTP-9"
+      ],
+      "reason": "identical normalised text in same source and ward"
+    }
+  ],
+  "cross_source_matches": [
+    {
+      "a": "FPG-C-1",
+      "b": "MTP-10",
+      "a_name": "Gol deol temple",
+      "b_name": "Temple (Gol Deool)",
+      "token_jaccard": 1.0,
+      "distance_m": 0
+    },
+    {
+      "a": "FPG-D-1",
+      "b": "BEST-25",
+      "a_name": "Nana Chowk-1",
+      "b_name": "Nana Chowk Nana Chowk Junction",
+      "token_jaccard": 1.0,
+      "distance_m": 0
+    },
+    {
+      "a": "FPG-FS-1",
+      "b": "BEST-52",
+      "a_name": "Jagannath Bhatankar Marg, Elphinstone (East/West)",
+      "b_name": "Jagannath Dhatankar Marg",
+      "token_jaccard": 0.67,
+      "distance_m": 0
+    },
+    {
+      "a": "FPG-FN-1",
+      "b": "BEST-63",
+      "a_name": "Vacchraj Lane",
+      "b_name": "Vachharaj Lane",
+      "token_jaccard": 1.0,
+      "distance_m": null
+    },
+    {
+      "a": "FPG-GS-1",
+      "b": "BEST-78",
+      "a_name": "Dr E Moses Road, Worli Naka",
+      "b_name": "Worli Naka Near Prem Nagar",
+      "token_jaccard": 0.33,
+      "distance_m": 0
+    },
+    {
+      "a": "FPG-GS-1",
+      "b": "MTP-25",
+      "a_name": "Dr E Moses Road, Worli Naka",
+      "b_name": "Dr A B Road North (Worli Naka)",
+      "token_jaccard": 0.75,
+      "distance_m": 0
+    },
+    {
+      "a": "FPG-HE-1",
+      "b": "MTP-47",
+      "a_name": "Khar Subway",
+      "b_name": "Khar Subway (Khar E)",
+      "token_jaccard": 1.0,
+      "distance_m": null
+    },
+    {
+      "a": "FPG-HW-1",
+      "b": "MTP-49",
+      "a_name": "Hill Road, Bandra West",
+      "b_name": "Hill Road",
+      "token_jaccard": 0.5,
+      "distance_m": 0
+    },
+    {
+      "a": "FPG-KW-1",
+      "b": "MTP-63",
+      "a_name": "Andheri Subway",
+      "b_name": "Andheri Subways",
+      "token_jaccard": 1.0,
+      "distance_m": null
+    },
+    {
+      "a": "FPG-L-2",
+      "b": "MTP-69",
+      "a_name": "Kurla Depot Junction, Kurla West",
+      "b_name": "Kurla Depot Junction, L B S Marg (W), Kalpana Junction",
+      "token_jaccard": 0.67,
+      "distance_m": 0
+    },
+    {
+      "a": "FPG-L-11",
+      "b": "MTP-68",
+      "a_name": "Surve Chowk",
+      "b_name": "Surve Chowk, L B S Marg",
+      "token_jaccard": 1.0,
+      "distance_m": null
+    },
+    {
+      "a": "FPG-PW-2",
+      "b": "MTP-86",
+      "a_name": "Malad Subway (West)",
+      "b_name": "S V Road, Malad Market and Subway",
+      "token_jaccard": 0.67,
+      "distance_m": null
+    },
+    {
+      "a": "FPG-S-2",
+      "b": "MTP-90",
+      "a_name": "Bhandup Village Road",
+      "b_name": "Bhandup Village Road Bhandup (W)",
+      "token_jaccard": 1.0,
+      "distance_m": 0
+    },
+    {
+      "a": "BEST-10",
+      "b": "MTP-8",
+      "a_name": "Meisheri Road Opp. Sandhurst Road Station (Nityanand Hotel)",
+      "b_name": "Sandhurst Road Railway Station",
+      "token_jaccard": 0.25,
+      "distance_m": 0
+    },
+    {
+      "a": "BEST-12",
+      "b": "MTP-5",
+      "a_name": "Mohammed Ali Road Sydneham Compound",
+      "b_name": "Mohammed Ali Road",
+      "token_jaccard": 0.5,
+      "distance_m": null
+    },
+    {
+      "a": "BEST-51",
+      "b": "MTP-13",
+      "a_name": "Hindmata Cinema Dr. B.A. Road",
+      "b_name": "Hindmata Junction North Bond",
+      "token_jaccard": 0.33,
+      "distance_m": 0
+    },
+    {
+      "a": "BEST-77",
+      "b": "MTP-27",
+      "a_name": "Pandurang Budhkar Marg Near Gopal Nagar",
+      "b_name": "Pandurang Budhkar Marg (Gopal Nagar)",
+      "token_jaccard": 1.0,
+      "distance_m": 0
+    },
+    {
+      "a": "BEST-78",
+      "b": "MTP-25",
+      "a_name": "Worli Naka Near Prem Nagar",
+      "b_name": "Dr A B Road North (Worli Naka)",
+      "token_jaccard": 0.4,
+      "distance_m": 0
+    }
+  ],
+  "ambiguous_matches_skipped": [
+    {
+      "a": "FPG-L-2",
+      "b": "MTP-71",
+      "a_name": "Kurla Depot Junction, Kurla West",
+      "b_name": "Kalpana Junction to Kurla Depot Junction",
+      "reason": "would merge two different records of the same source"
+    }
+  ],
+  "unmapped": [
+    {
+      "records": [
+        "FPG-HE-1",
+        "MTP-47"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "FPG-HE-2"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "FPG-N-4"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "FPG-PE-3"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "FPG-PW-4"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "BEST-14"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "BEST-18"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "BEST-19"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "MTP-3",
+        "MTP-9"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "MTP-22"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "MTP-30"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "MTP-83"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "MTP-88"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "MTP-89"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    },
+    {
+      "records": [
+        "MTP-91"
+      ],
+      "reason": "geocode not found or contradicted the ward named in the source"
+    }
+  ],
+  "matches_rejected_by_review": [
+    {
+      "a": "BEST-64",
+      "b": "MTP-20",
+      "reason": "different landmarks (Road No. 6 near Mukhyadhyapak Bhavan vs Sion Circle junction); the only shared word is the locality name Sion"
+    },
+    {
+      "a": "FPG-PE-4",
+      "b": "MTP-86",
+      "reason": "traffic-police row is S V Road, Malad (West side) - it corresponds to Malad Subway (West), not the East-side entry"
+    }
+  ],
+  "outputs": {
+    "unique_locations": 251,
+    "by_n_sources": {
+      "1": 235,
+      "2": 15,
+      "3": 1
+    },
+    "by_source_combination": {
+      "BMC_FPG_2026": 84,
+      "MTP_DIVERSIONS_2026": 76,
+      "BEST_ANNEX_IX_2026": 75,
+      "BMC_FPG_2026|MTP_DIVERSIONS_2026": 8,
+      "BEST_ANNEX_IX_2026|MTP_DIVERSIONS_2026": 4,
+      "BEST_ANNEX_IX_2026|BMC_FPG_2026": 3,
+      "BEST_ANNEX_IX_2026|BMC_FPG_2026|MTP_DIVERSIONS_2026": 1
+    },
+    "by_precision": {
+      "area": 144,
+      "point": 47,
+      "street": 45,
+      "not_mappable": 15
+    }
+  }
+}

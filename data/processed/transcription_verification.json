@@ -1,0 +1,47 @@
+{
+  "best_annex_ix_2026": {
+    "rows": 84,
+    "matched": 83,
+    "below_threshold": {
+      "BEST-54": 0.79
+    },
+    "max_sr_no": 84,
+    "sr_no_contiguous": true
+  },
+  "bmc_fpg2026": {
+    "rows": 97,
+    "matched": 93,
+    "below_threshold_for_manual_review": {
+      "FPG-FS-1": 0.72,
+      "FPG-ME-5": 0.79,
+      "FPG-N-7": 0.76,
+      "FPG-RS-4": 0.79
+    },
+    "mean_similarity": 0.976,
+    "header_vs_rows": [
+      {
+        "ward_published": "C",
+        "header": null,
+        "rows_listed": 1
+      },
+      {
+        "ward_published": "P/East",
+        "header": 4,
+        "rows_listed": 5
+      },
+      {
+        "ward_published": "R/N",
+        "header": 5,
+        "rows_listed": 6
+      }
+    ],
+    "rows_listed_total": 97,
+    "header_total": 94
+  },
+  "mtp_diversions_2026": {
+    "rows": 92,
+    "location_rows": 90,
+    "matched": 92,
+    "below_threshold": {}
+  }
+}

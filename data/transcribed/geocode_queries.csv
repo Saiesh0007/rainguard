@@ -1,0 +1,272 @@
+record_id,query_1,query_2,query_1_level
+FPG-C-1,"Gol Deval, Bhuleshwar, Mumbai","Bhuleshwar, Mumbai",feature
+FPG-D-1,"Nana Chowk, Mumbai","Nana Chowk, Grant Road, Mumbai",feature
+FPG-E-1,"Nair Hospital, Mumbai","Mumbai Central, Mumbai",feature
+FPG-FS-1,"Jagannath Bhatankar Marg, Mumbai","Elphinstone Road, Mumbai",feature
+FPG-FN-1,"Vachharaj Lane, Mumbai","Dadar East, Mumbai",feature
+FPG-FN-2,"Wadala Road railway station, Mumbai","Wadala, Mumbai",feature
+FPG-FN-3,"Rafi Ahmed Kidwai Road, Wadala, Mumbai","Wadala, Mumbai",feature
+FPG-FN-4,"Rafi Ahmed Kidwai Road, Matunga, Mumbai","Wadala, Mumbai",feature
+FPG-FN-5,"Road No 24, Sion, Mumbai","Sion, Mumbai",feature
+FPG-GS-1,"Worli Naka, Mumbai","Dr E Moses Road, Worli, Mumbai",feature
+FPG-HE-1,"Khar Subway, Mumbai","Khar East, Mumbai",feature
+FPG-HE-2,"St Anthony Road, Santacruz, Mumbai","Krishna Nagar, Santacruz East, Mumbai",feature
+FPG-HE-3,"CST Road, Kalina, Mumbai","Kalina, Mumbai",feature
+FPG-HW-1,"Hill Road, Bandra West, Mumbai","Bandra West, Mumbai",feature
+FPG-KE-1,"M C Chagla Marg, Andheri East, Mumbai","Andheri East, Mumbai",feature
+FPG-KW-1,"Andheri Subway, Mumbai","Andheri West, Mumbai",feature
+FPG-KW-2,"Veera Desai Road, Andheri West, Mumbai","Andheri West, Mumbai",feature
+FPG-KW-3,"Andheri Market, SV Road, Mumbai","SV Road, Andheri West, Mumbai",feature
+FPG-KW-4,"Irla, Vile Parle West, Mumbai","Vile Parle West, Mumbai",feature
+FPG-KW-5,"Versova Cemetery, Mumbai","Versova, Mumbai",feature
+FPG-KW-6,"Teachers Colony, Andheri West, Mumbai","Andheri West, Mumbai",feature
+FPG-L-1,"Kapadia Nagar, Kurla West, Mumbai","CST Road, Kurla, Mumbai",feature
+FPG-L-2,"Kurla Depot, Kurla West, Mumbai","Kurla West, Mumbai",feature
+FPG-L-3,"Khairani Road, Sakinaka, Mumbai","Sakinaka, Mumbai",feature
+FPG-L-4,"Saki Naka metro station, Mumbai","Sakinaka, Mumbai",feature
+FPG-L-5,"Vinoba Bhave Nagar, Kurla West, Mumbai","Kurla West, Mumbai",feature
+FPG-L-6,"Saki Naka metro station, Mumbai","Sakinaka, Mumbai",feature
+FPG-L-7,"Khairani Road, Mumbai","Sakinaka, Mumbai",feature
+FPG-L-8,"Sonapur, LBS Marg, Kurla, Mumbai","Kurla West, Mumbai",feature
+FPG-L-9,"Chunabhatti, Mumbai","Chunabhatti railway station, Mumbai",feature
+FPG-L-10,"Kurla railway station, Mumbai","Kurla, Mumbai",feature
+FPG-L-11,"Surve Chowk, Kurla, Mumbai","Kurla, Mumbai",feature
+FPG-L-12,"Kurla Court, Mumbai","LBS Marg, Kurla West, Mumbai",feature
+FPG-L-13,"Kurla East, Mumbai","Kurla, Mumbai",area
+FPG-L-14,"Shivsrushti, Kurla East, Mumbai","Kurla East, Mumbai",feature
+FPG-L-15,"Kale Marg, Kurla, Mumbai","Kurla West, Mumbai",feature
+FPG-L-16,"Brahmanwadi, Kurla, Mumbai","Kurla West, Mumbai",feature
+FPG-L-17,"Bhakti Dham, Chunabhatti, Mumbai","Chunabhatti, Mumbai",feature
+FPG-ME-1,"Mahatma Phule Nagar, Mankhurd, Mumbai","Mankhurd, Mumbai",feature
+FPG-ME-2,"Maharashtra Nagar, Mankhurd, Mumbai","Mankhurd railway station, Mumbai",feature
+FPG-ME-3,"Eastern Freeway tunnel, Mumbai","Anik, Mumbai",feature
+FPG-ME-4,"V N Purav Marg, Deonar, Mumbai","Deonar, Mumbai",feature
+FPG-ME-5,"Mankhurd railway station, Mumbai","Mankhurd, Mumbai",feature
+FPG-MW-1,"Postal Colony, Chembur, Mumbai","Chembur, Mumbai",feature
+FPG-MW-2,"Postal Colony, Chembur, Mumbai","Chembur, Mumbai",feature
+FPG-MW-3,"Tembi Bridge, Chembur, Mumbai","Chembur, Mumbai",feature
+FPG-MW-4,"Maharashtra Nagar, Mankhurd, Mumbai","Chembur, Mumbai",feature
+FPG-N-1,"Shastri Nagar, Vidyavihar, Mumbai","Vidyavihar East, Mumbai",feature
+FPG-N-2,"Ramabai Nagar, Ghatkopar, Mumbai","Ghatkopar East, Mumbai",feature
+FPG-N-3,"Savitribai Phule Nagar, Ghatkopar, Mumbai","Ghatkopar, Mumbai",feature
+FPG-N-4,"Vikhroli Parksite, Mumbai","Vikhroli West, Mumbai",area
+FPG-N-5,"Shraddhanand Road, Ghatkopar West, Mumbai","Ghatkopar West, Mumbai",feature
+FPG-N-6,"M G Road, Ghatkopar, Mumbai","Ghatkopar, Mumbai",feature
+FPG-N-7,"Haripada, Ghatkopar West, Mumbai","Ghatkopar West, Mumbai",feature
+FPG-N-8,"LBS Marg, Ghatkopar West, Mumbai","Ghatkopar West, Mumbai",feature
+FPG-N-9,"Jolly Gymkhana, Ghatkopar, Mumbai","Ghatkopar West, Mumbai",feature
+FPG-N-10,"Kamraj Nagar, Ghatkopar East, Mumbai","Ghatkopar East, Mumbai",feature
+FPG-N-11,"Vallabh Baug Lane, Ghatkopar, Mumbai","Ghatkopar East, Mumbai",feature
+FPG-N-12,"Vidyavihar railway station, Mumbai","Vidyavihar, Mumbai",feature
+FPG-N-13,"Ghatkopar West, Mumbai","Ghatkopar, Mumbai",area
+FPG-N-14,"ONGC Colony, Vidyavihar, Mumbai","Vidyavihar East, Mumbai",feature
+FPG-N-15,"Shastri Nagar, Vidyavihar, Mumbai","Vidyavihar East, Mumbai",feature
+FPG-PE-1,"Pushpa Park, Malad East, Mumbai","Malad East, Mumbai",feature
+FPG-PE-2,"Malad East, Mumbai","Malad, Mumbai",area
+FPG-PE-3,"Tanaji Nagar, Kurar Village, Malad East, Mumbai","Kurar Village, Mumbai",feature
+FPG-PE-4,"Malad Subway, Malad, Mumbai","Malad railway station, Mumbai",feature
+FPG-PE-5,"Appa Pada, Malad East, Mumbai","Malad East, Mumbai",feature
+FPG-PW-1,"Malad West, Mumbai","Malad, Mumbai",area
+FPG-PW-2,"Malad Subway, Malad, Mumbai","Malad railway station, Mumbai",feature
+FPG-PW-3,"Gangabawdi, Malad West, Mumbai","Malad West, Mumbai",feature
+FPG-PW-4,"Shivaji Nagar, Madh, Mumbai","Madh, Mumbai",feature
+FPG-PS-1,"Goregaon East, Mumbai","Goregaon, Mumbai",area
+FPG-PS-2,"Goregaon, Mumbai","Goregaon East, Mumbai",area
+FPG-PS-3,"Oberoi Mall, Goregaon, Mumbai","Goregaon East, Mumbai",feature
+FPG-PS-6,"Shastri Nagar, Goregaon West, Mumbai","Goregaon West, Mumbai",feature
+FPG-RC-1,"Shimpoli, Borivali West, Mumbai","Borivali West, Mumbai",feature
+FPG-RN-1,"Vaishali Nagar, Dahisar East, Mumbai","Dahisar East, Mumbai",feature
+FPG-RN-2,"Dahisar Gaothan, Mumbai","Dahisar West, Mumbai",feature
+FPG-RN-3,"Anand Nagar, Dahisar, Mumbai","Dahisar, Mumbai",feature
+FPG-RN-4,"Dahisar, Mumbai","Dahisar West, Mumbai",area
+FPG-RN-5,"Patil Wadi, Dahisar, Mumbai","Dahisar, Mumbai",feature
+FPG-RN-6,"Raj Nagar, Dahisar, Mumbai","Dahisar, Mumbai",feature
+FPG-RS-1,"Maharashtra Nagar, Kandivali West, Mumbai","Kandivali West, Mumbai",feature
+FPG-RS-2,"Jijamata Nagar, Kandivali West, Mumbai","Kandivali West, Mumbai",feature
+FPG-RS-3,"Maruti Nagar, Kandivali West, Mumbai","Kandivali West, Mumbai",feature
+FPG-RS-4,"Dahanukar Wadi, Kandivali West, Mumbai","Kandivali West, Mumbai",feature
+FPG-RS-5,"Hanuman Nagar, Kandivali East, Mumbai","Kandivali East, Mumbai",feature
+FPG-RS-6,"Poisar, Kandivali, Mumbai","Kandivali East, Mumbai",feature
+FPG-S-1,"Bhandup railway station, Mumbai","Bhandup West, Mumbai",feature
+FPG-S-2,"Bhandup Village Road, Mumbai","Bhandup East, Mumbai",feature
+FPG-S-3,"LBS Marg, Bhandup West, Mumbai","Bhandup West, Mumbai",feature
+FPG-S-4,"Sonapur, Bhandup West, Mumbai","Bhandup West, Mumbai",feature
+FPG-S-5,"Tagore Nagar, Vikhroli East, Mumbai","Vikhroli East, Mumbai",feature
+FPG-S-6,"Lake Road, Bhandup West, Mumbai","Bhandup West, Mumbai",feature
+FPG-S-7,"Kannamwar Nagar, Vikhroli East, Mumbai","Vikhroli East, Mumbai",feature
+FPG-T-1,"Jain Mandir, Mulund West, Mumbai","Mulund West, Mumbai",feature
+FPG-T-2,"Mehul Circle, Mulund West, Mumbai","Mulund West, Mumbai",feature
+BEST-1,"Geeta Nagar, Colaba, Mumbai","Navy Nagar, Colaba, Mumbai",feature
+BEST-2,"Geeta Nagar, Colaba, Mumbai","Navy Nagar, Colaba, Mumbai",feature
+BEST-3,"Geeta Nagar, Colaba, Mumbai","Navy Nagar, Colaba, Mumbai",feature
+BEST-4,"Geeta Nagar, Colaba, Mumbai","Navy Nagar, Colaba, Mumbai",feature
+BEST-5,"Ambedkar Nagar, Cuffe Parade, Mumbai","Cuffe Parade, Mumbai",feature
+BEST-6,"Ambedkar Nagar, Cuffe Parade, Mumbai","Cuffe Parade, Mumbai",feature
+BEST-7,"Ambedkar Nagar, Cuffe Parade, Mumbai","Cuffe Parade, Mumbai",feature
+BEST-8,"Ganesh Murti Nagar, Cuffe Parade, Mumbai","Cuffe Parade, Mumbai",feature
+BEST-9,"Ganesh Murti Nagar, Cuffe Parade, Mumbai","Cuffe Parade, Mumbai",feature
+BEST-10,"Sandhurst Road railway station, Mumbai","Dongri, Mumbai",feature
+BEST-11,"Chinch Bunder, Mumbai","Dongri, Mumbai",area
+BEST-12,"Mohammed Ali Road, Mumbai","Pydhonie, Mumbai",feature
+BEST-13,"Sardar Vallabhbhai Patel Road, Bhuleshwar, Mumbai","Bhuleshwar, Mumbai",feature
+BEST-14,"C P Tank, Mumbai","Bhuleshwar, Mumbai",feature
+BEST-15,"Maulana Azad Road, Mumbai","Nagpada, Mumbai",feature
+BEST-16,"Erskine Road, Mumbai","Bhuleshwar, Mumbai",feature
+BEST-17,"Mitrasen Mahimtura Marg, Mumbai","Bhuleshwar, Mumbai",feature
+BEST-18,"Sant Sena Marg, Mumbai","Bhuleshwar, Mumbai",feature
+BEST-19,"Trimbak Parshuram Road, Mumbai","Bhuleshwar, Mumbai",feature
+BEST-20,"Durgadevi Road, Mumbai","Bhuleshwar, Mumbai",feature
+BEST-21,"Petit Hall, Nepean Sea Road, Mumbai","Nepean Sea Road, Mumbai",feature
+BEST-22,"Nepean Sea Road, Mumbai","Malabar Hill, Mumbai",feature
+BEST-23,"Bhulabhai Desai Road, Mumbai","Breach Candy, Mumbai",feature
+BEST-24,"Breach Candy Hospital, Mumbai","Breach Candy, Mumbai",feature
+BEST-25,"Nana Chowk, Mumbai","Grant Road, Mumbai",feature
+BEST-26,"Tardeo Circle, Mumbai","Tardeo, Mumbai",feature
+BEST-27,"Tardeo Road, Mumbai","Tardeo, Mumbai",feature
+BEST-28,"Grant Road railway station, Mumbai","Grant Road, Mumbai",feature
+BEST-29,"Babulnath Road, Mumbai","Girgaon Chowpatty, Mumbai",feature
+BEST-30,"Grant Road railway station, Mumbai","Grant Road, Mumbai",feature
+BEST-31,"Alankar Cinema, Mumbai","Grant Road, Mumbai",feature
+BEST-32,"Khetwadi, Mumbai","Girgaon, Mumbai",area
+BEST-33,"R S Nimkar Marg, Mumbai","Grant Road, Mumbai",feature
+BEST-34,"Patthe Bapurao Marg, Mumbai","Grant Road, Mumbai",feature
+BEST-35,"Gilder Lane, Mumbai","Mumbai Central, Mumbai",feature
+BEST-36,"J J Road, Byculla, Mumbai","Byculla, Mumbai",feature
+BEST-37,"Palace Cinema, Byculla, Mumbai","Byculla, Mumbai",feature
+BEST-38,"T B Kadam Marg, Mumbai","Byculla, Mumbai",feature
+BEST-39,"Dattaram Lad Marg, Mumbai","Kalachowki, Mumbai",feature
+BEST-40,"Barrister Nath Pai Road, Mumbai","Byculla, Mumbai",feature
+BEST-41,"Sant Savta Marg, Mumbai","Byculla, Mumbai",feature
+BEST-42,"Kalachowki, Mumbai","Byculla, Mumbai",area
+BEST-43,"Kalachowki, Mumbai","Byculla, Mumbai",area
+BEST-44,"Motishah Lane, Byculla, Mumbai","Byculla, Mumbai",feature
+BEST-45,"Byculla, Mumbai","Byculla railway station, Mumbai",area
+BEST-46,"Sankli Street, Byculla, Mumbai","Byculla, Mumbai",feature
+BEST-47,"Agripada, Mumbai","Mumbai Central, Mumbai",area
+BEST-48,"Maratha Mandir, Mumbai Central, Mumbai","Mumbai Central, Mumbai",feature
+BEST-49,"Bellasis Road, Mumbai","Mumbai Central, Mumbai",feature
+BEST-50,"Chinchpokli railway station, Mumbai","Chinchpokli, Mumbai",feature
+BEST-51,"Hindmata, Dadar, Mumbai","Parel, Mumbai",feature
+BEST-52,"Jagannath Bhatankar Marg, Mumbai","Parel, Mumbai",feature
+BEST-53,"Dattaram Khamkar Marg, Mumbai","Parel, Mumbai",feature
+BEST-54,"Kalachowki, Mumbai","Parel, Mumbai",area
+BEST-55,"Zakaria Bunder Road, Sewri, Mumbai","Sewri, Mumbai",feature
+BEST-56,"Parel, Mumbai","Sewri, Mumbai",area
+BEST-57,"Dadasaheb Phalke Road, Mumbai","Dadar East, Mumbai",feature
+BEST-58,"Rafi Ahmed Kidwai Road, Sewri, Mumbai","Sewri, Mumbai",feature
+BEST-59,"Sewri Cross Road, Mumbai","Sewri, Mumbai",feature
+BEST-60,"Gandhi Market, Sion, Mumbai","King's Circle, Mumbai",feature
+BEST-61,"Rafi Ahmed Kidwai Road, Wadala, Mumbai","Wadala, Mumbai",feature
+BEST-62,"Dadar TT Circle, Mumbai","Dadar East, Mumbai",feature
+BEST-63,"Vachharaj Lane, Mumbai","Dadar East, Mumbai",feature
+BEST-64,"Road No 6, Sion, Mumbai","Sion, Mumbai",feature
+BEST-65,"Guru Nanak High School, Mumbai","Sion, Mumbai",feature
+BEST-66,"Bhau Daji Road, Matunga, Mumbai","Matunga, Mumbai",feature
+BEST-67,"Hindu Colony, Dadar, Mumbai","Dadar East, Mumbai",feature
+BEST-68,"Acworth Leprosy Hospital, Wadala, Mumbai","Wadala, Mumbai",feature
+BEST-69,"Gandhi Market, Sion, Mumbai","King's Circle, Mumbai",feature
+BEST-70,"Shanti Nagar, Wadala, Mumbai","Wadala, Mumbai",feature
+BEST-71,"Koliwada, Wadala, Mumbai","Wadala, Mumbai",feature
+BEST-72,"Curry Road railway station, Mumbai","Lower Parel, Mumbai",feature
+BEST-73,"Prabhadevi railway station, Mumbai","Elphinstone Road, Mumbai",feature
+BEST-74,"Lower Parel, Mumbai","Worli, Mumbai",area
+BEST-75,"N M Joshi Marg, Mumbai","Lower Parel, Mumbai",feature
+BEST-76,"BDD Chawl, N M Joshi Marg, Mumbai","Lower Parel, Mumbai",feature
+BEST-77,"Pandurang Budhkar Marg, Mumbai","Worli, Mumbai",feature
+BEST-78,"Worli Naka, Mumbai","Worli, Mumbai",feature
+BEST-79,"Nehru Nagar, Worli, Mumbai","Worli, Mumbai",feature
+BEST-80,"Khan Abdul Gaffar Khan Road, Mumbai","Worli, Mumbai",feature
+BEST-81,"T H Kataria Marg, Mumbai","Mahim, Mumbai",feature
+BEST-82,"Mahim Church, Mumbai","Mahim, Mumbai",feature
+BEST-83,"Dharavi Transit Camp, Mumbai","Dharavi, Mumbai",feature
+BEST-84,"Andhra Valley Road, Mumbai","Matunga Labour Camp, Mumbai",feature
+MTP-1,"Azad Maidan, Mumbai","Fort, Mumbai",feature
+MTP-2,"Mint Road, Fort, Mumbai","Fort, Mumbai",feature
+MTP-3,"J J Marg Police Station, Mumbai","Nagpada, Mumbai",feature
+MTP-4,"Mandvi, Mumbai","Masjid Bunder, Mumbai",feature
+MTP-5,"Mohammed Ali Road, Mumbai","Pydhonie, Mumbai",feature
+MTP-6,"J J Flyover, Mumbai","Pydhonie, Mumbai",feature
+MTP-7,"Bhendi Bazaar, Mumbai","Pydhonie, Mumbai",feature
+MTP-8,"Sandhurst Road railway station, Mumbai","Dongri, Mumbai",feature
+MTP-9,"J J Marg Police Station, Mumbai","Nagpada, Mumbai",feature
+MTP-10,"Gol Deval, Bhuleshwar, Mumbai","Bhuleshwar, Mumbai",feature
+MTP-11,"Alankar Cinema, Mumbai","Girgaon, Mumbai",feature
+MTP-12,"Nagpada Junction, Mumbai","Nagpada, Mumbai",feature
+MTP-13,"Hindmata, Dadar, Mumbai","Parel, Mumbai",feature
+MTP-14,"Bhoiwada, Mumbai","Parel, Mumbai",feature
+MTP-15,"Parel TT, Mumbai","Parel, Mumbai",feature
+MTP-16,"Krishna Nagar, Parel, Mumbai","Parel, Mumbai",feature
+MTP-17,"Bharatmata Cinema, Lalbaug, Mumbai","Lalbaug, Mumbai",feature
+MTP-18,"Maheshwari Udyan, Matunga, Mumbai","Matunga, Mumbai",feature
+MTP-19,"Dadar TT Circle, Mumbai","Dadar East, Mumbai",feature
+MTP-20,"Sion Circle, Mumbai","Sion, Mumbai",feature
+MTP-21,"Sion Hospital, Mumbai","Sion, Mumbai",feature
+MTP-22,"Nawab Tank Bridge, Mumbai","Mazgaon, Mumbai",feature
+MTP-23,"Poonam Chambers, Worli, Mumbai","Worli, Mumbai",feature
+MTP-25,"Worli Naka, Mumbai","Worli, Mumbai",feature
+MTP-26,"Ganpatrao Kadam Marg, Mumbai","Lower Parel, Mumbai",feature
+MTP-27,"Pandurang Budhkar Marg, Mumbai","Worli, Mumbai",feature
+MTP-28,"N M Joshi Marg, Lower Parel, Mumbai","Lower Parel, Mumbai",feature
+MTP-29,"Bawla Masjid, Mumbai","Lower Parel, Mumbai",feature
+MTP-30,"General Arunkumar Vaidya Marg, Mumbai","Mahim, Mumbai",feature
+MTP-31,"Tilak Bridge, Dadar, Mumbai","Dadar, Mumbai",feature
+MTP-32,"Senapati Bapat Marg, Mumbai","Dadar West, Mumbai",feature
+MTP-33,"Lady Jamshedji Road, Mahim, Mumbai","Mahim, Mumbai",feature
+MTP-34,"Swatantryaveer Savarkar Road, Dadar, Mumbai","Dadar West, Mumbai",feature
+MTP-36,"CST Road, Kalina, Mumbai","Kalina, Mumbai",feature
+MTP-37,"Vidyanagari railway station, Mumbai","Kalina, Mumbai",feature
+MTP-38,"Kherwadi Junction, Bandra East, Mumbai","Bandra East, Mumbai",feature
+MTP-39,"Kalanagar, Bandra East, Mumbai","Bandra East, Mumbai",feature
+MTP-40,"Vakola Bridge, Mumbai","Vakola, Mumbai",feature
+MTP-41,"Kalanagar Junction, Bandra East, Mumbai","Bandra East, Mumbai",feature
+MTP-42,"Hans Bhugra Marg, Santacruz East, Mumbai","Santacruz East, Mumbai",feature
+MTP-43,"Vakola Junction, Mumbai","Vakola, Mumbai",feature
+MTP-44,"Teachers Colony, Bandra East, Mumbai","Bandra East, Mumbai",feature
+MTP-45,"A K Marg, Bandra East, Mumbai","Bandra East, Mumbai",feature
+MTP-46,"Milan Subway, Santacruz, Mumbai","Santacruz East, Mumbai",feature
+MTP-47,"Khar Subway, Mumbai","Khar East, Mumbai",feature
+MTP-48,"Swami Vivekanand Road, Bandra West, Mumbai","Bandra West, Mumbai",feature
+MTP-49,"Hill Road, Bandra West, Mumbai","Bandra West, Mumbai",feature
+MTP-50,"St John Baptist Road, Bandra, Mumbai","Bandra West, Mumbai",feature
+MTP-51,"Tunnel Road, Bandra, Mumbai","Bandra West, Mumbai",feature
+MTP-52,"General Arunkumar Vaidya Marg, Bandra, Mumbai","Bandra West, Mumbai",feature
+MTP-53,"Carter Road, Bandra, Mumbai","Bandra West, Mumbai",feature
+MTP-54,"Marol Naka, Andheri East, Mumbai","Marol, Mumbai",feature
+MTP-55,"Andheri Subway, Andheri East, Mumbai","Andheri East, Mumbai",feature
+MTP-56,"Bahar Junction, Andheri East, Mumbai","Andheri East, Mumbai",feature
+MTP-57,"Andheri Kurla Road, Andheri East, Mumbai","Andheri East, Mumbai",feature
+MTP-58,"Juhu Tara Road, Mumbai","Juhu, Mumbai",feature
+MTP-59,"Saraswati Road, Santacruz West, Mumbai","Santacruz West, Mumbai",feature
+MTP-60,"Swami Vivekanand Road, Andheri West, Mumbai","Andheri West, Mumbai",feature
+MTP-61,"Milan Subway, Mumbai","Santacruz West, Mumbai",feature
+MTP-62,"Linking Road, Santacruz West, Mumbai","Santacruz West, Mumbai",feature
+MTP-63,"Andheri Subway, Andheri West, Mumbai","Andheri West, Mumbai",feature
+MTP-64,"Oshiwara Bridge, Mumbai","Oshiwara, Mumbai",feature
+MTP-65,"Irla, Vile Parle West, Mumbai","Vile Parle West, Mumbai",feature
+MTP-66,"Cooper Hospital, Juhu, Mumbai","Vile Parle West, Mumbai",feature
+MTP-67,"J P Road, Andheri West, Mumbai","Andheri West, Mumbai",feature
+MTP-68,"Surve Chowk, Kurla, Mumbai","Kurla West, Mumbai",feature
+MTP-69,"Kurla Depot, Kurla West, Mumbai","Kurla West, Mumbai",feature
+MTP-70,"Lal Bahadur Shastri Marg, Kurla West, Mumbai","Kurla West, Mumbai",feature
+MTP-71,"Kalpana Cinema, Kurla, Mumbai","Kurla West, Mumbai",feature
+MTP-72,"Kamani Junction, Kurla, Mumbai","Kurla West, Mumbai",feature
+MTP-73,"Trombay, Mumbai","Chembur, Mumbai",area
+MTP-74,"Mankhurd, Mumbai","Mankhurd railway station, Mumbai",area
+MTP-75,"Deonar, Mumbai","Govandi, Mumbai",area
+MTP-76,"RCF Colony, Chembur, Mumbai","Chembur, Mumbai",feature
+MTP-77,"Umarshi Bappa Chowk, Chembur, Mumbai","Chembur, Mumbai",feature
+MTP-78,"Suman Nagar, Chembur, Mumbai","Chembur, Mumbai",feature
+MTP-79,"Sion Trombay Road, Chembur, Mumbai","Chembur, Mumbai",feature
+MTP-80,"R City Mall, Ghatkopar, Mumbai","Ghatkopar West, Mumbai",feature
+MTP-81,"Film City Road, Goregaon East, Mumbai","Goregaon East, Mumbai",feature
+MTP-82,"Aarey Road, Goregaon East, Mumbai","Goregaon East, Mumbai",feature
+MTP-83,"Sainath Subway, Malad, Mumbai","Malad West, Mumbai",feature
+MTP-84,"Swami Vivekanand Road, Goregaon West, Mumbai","Goregaon West, Mumbai",feature
+MTP-85,"Akurli Road, Kandivali East, Mumbai","Kandivali East, Mumbai",feature
+MTP-86,"Malad Subway, Malad, Mumbai","Malad West, Mumbai",feature
+MTP-87,"Gandhi Nagar, Kanjurmarg West, Mumbai","Kanjurmarg West, Mumbai",feature
+MTP-88,"Ankush Gawade Road, Mumbai","Ghatkopar, Mumbai",feature
+MTP-89,"R B Mehta Marg, Ghatkopar, Mumbai","Ghatkopar East, Mumbai",feature
+MTP-90,"Bhandup Village Road, Mumbai","Bhandup West, Mumbai",feature
+MTP-91,"Saki Naka, Mumbai","Sakinaka, Mumbai",feature
+MTP-92,"Ganesh Ghat, Powai, Mumbai","Powai, Mumbai",feature

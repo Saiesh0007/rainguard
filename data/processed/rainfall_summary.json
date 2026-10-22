@@ -1,0 +1,60 @@
+{
+  "imd": {
+    "source": "IMD gridded monthly rainfall, grid point 19.00N 72.75E, via OpenCity",
+    "years": [
+      1901,
+      2021
+    ],
+    "mean_annual_mm": 2168.0,
+    "jjas_share_of_annual": 0.947,
+    "wettest_month": 7,
+    "annual_total_trend_1901_2021": {
+      "kendall_tau": 0.216,
+      "p_value": 0.0004,
+      "theil_sen_slope_per_decade": 48.58,
+      "slope_95ci_per_decade": [
+        21.54,
+        74.79
+      ]
+    }
+  },
+  "era5": {
+    "source": "ERA5 reanalysis daily precipitation via Open-Meteo Historical Weather API",
+    "grid_lat": 19.0,
+    "grid_lon": 73.0,
+    "grid_elevation_m": 6.0,
+    "years": [
+      1991,
+      2025
+    ],
+    "days": 12784,
+    "mean_heavy_days_per_year": 4.51,
+    "mean_very_heavy_days_per_year": 0.66,
+    "mean_extreme_days_per_year": 0.17,
+    "median_top10_day_share_jjas": 0.359,
+    "heavy_days_trend": {
+      "kendall_tau": 0.123,
+      "p_value": 0.3163,
+      "theil_sen_slope_per_decade": 0.43,
+      "slope_95ci_per_decade": [
+        -0.53,
+        1.43
+      ]
+    },
+    "max_day": {
+      "date": "2020-08-05",
+      "mm": 303.8
+    },
+    "2005_07_26_mm": 69.6,
+    "2005_07_26_reference_mm": 944,
+    "2005_07_26_reference_source": "BMC Flood Preparedness Guidelines 2026, p.17 (Santacruz record)"
+  },
+  "era5_vs_imd_monthly_1991_2021": {
+    "n_months": 372,
+    "pearson_r_all_months": 0.94,
+    "pearson_r_jjas_months": 0.805,
+    "mean_annual_era5_mm": 1920.0,
+    "mean_annual_imd_mm": 2393.0,
+    "era5_to_imd_ratio": 0.802
+  }
+}

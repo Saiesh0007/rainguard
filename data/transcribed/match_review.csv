@@ -1,0 +1,3 @@
+a,b,decision,reason
+BEST-64,MTP-20,reject,"different landmarks (Road No. 6 near Mukhyadhyapak Bhavan vs Sion Circle junction); the only shared word is the locality name Sion"
+FPG-PE-4,MTP-86,reject,"traffic-police row is S V Road, Malad (West side) - it corresponds to Malad Subway (West), not the East-side entry"

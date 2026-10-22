@@ -1,0 +1,233 @@
+{
+  "bmc_ward_A": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20A-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_A.pdf",
+    "accessed_utc": "2026-10-22T12:20:33+00:00",
+    "bytes": 2896416,
+    "sha256": "3f5b4e4c661051b31de79360e30b9fe806c6d62667a9032b179979d6bc63d079"
+  },
+  "bmc_ward_B": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20B-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_B.pdf",
+    "accessed_utc": "2026-10-22T12:20:35+00:00",
+    "bytes": 1718426,
+    "sha256": "5ec5546b80049c81fabe405fe1b42da89645fc9efb747c0926717d798aa07a23"
+  },
+  "bmc_ward_C": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20C-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_C.pdf",
+    "accessed_utc": "2026-10-22T12:20:36+00:00",
+    "bytes": 1929656,
+    "sha256": "b424e7a41dbee9edd5d6ffe23b595f50378e744eeb4ef5efb4abe7fb1b2aeecf"
+  },
+  "bmc_ward_D": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20D-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_D.pdf",
+    "accessed_utc": "2026-10-22T12:20:38+00:00",
+    "bytes": 4539572,
+    "sha256": "d98c14fe3743f8015813da62e3525ff644bd5720256e15b4d36f269c958dadaf"
+  },
+  "bmc_ward_E": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20E-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_E.pdf",
+    "accessed_utc": "2026-10-22T12:20:39+00:00",
+    "bytes": 2356407,
+    "sha256": "ec14f6c892fed5ecd803639b672df03cbe8ab14d59d1485b28e9c4cd04924589"
+  },
+  "bmc_ward_FN": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20FN-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_FN.pdf",
+    "accessed_utc": "2026-10-22T12:20:40+00:00",
+    "bytes": 2439241,
+    "sha256": "ee1cf6010ceaa539228c742452558bd8f09fe666a5c9ec278c51a2727c0018aa"
+  },
+  "bmc_ward_FS": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20FS-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_FS.pdf",
+    "accessed_utc": "2026-10-22T12:20:42+00:00",
+    "bytes": 2488005,
+    "sha256": "4602007d0277c88f71f94e8bafd9751a683c0e5e7d2710c4e2c7eeb206778de5"
+  },
+  "bmc_ward_GN": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20GN-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_GN.pdf",
+    "accessed_utc": "2026-10-22T12:20:43+00:00",
+    "bytes": 3527886,
+    "sha256": "d32df3d8d2dc7c015d016f609702a45111f9e3d7a9bfe8ef18c736e21a06ee71"
+  },
+  "bmc_ward_GS": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20GS-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_GS.pdf",
+    "accessed_utc": "2026-10-22T12:20:45+00:00",
+    "bytes": 3509451,
+    "sha256": "4548600dda9eb6329e11478619ed5f7ae0c8d6846aa134b07021196b671ad4b8"
+  },
+  "bmc_ward_HE": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20HE-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_HE.pdf",
+    "accessed_utc": "2026-10-22T12:20:46+00:00",
+    "bytes": 2611842,
+    "sha256": "3670b0bf734b00dd9b20a79c838a215a46e9360d2edf95a57eda28f6b060ed22"
+  },
+  "bmc_ward_HW": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20HW-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_HW.pdf",
+    "accessed_utc": "2026-10-22T12:20:47+00:00",
+    "bytes": 3676753,
+    "sha256": "ad7746001bca291d52333ec027b0c468fb8f2008d61a2887a58503f0d7e7c727"
+  },
+  "bmc_ward_KE": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20KE-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_KE.pdf",
+    "accessed_utc": "2026-10-22T12:20:49+00:00",
+    "bytes": 2563147,
+    "sha256": "0bef9e9f8262a6bb184cdd1a5c98c7b078d23af945bcc575b6187e0a67ae06d5"
+  },
+  "bmc_ward_KW": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20KW-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_KW.pdf",
+    "accessed_utc": "2026-10-22T12:20:50+00:00",
+    "bytes": 6045988,
+    "sha256": "412edd7b757084b0de0063c42937cea7669a4811f7221bf8fb4e5ead293f530b"
+  },
+  "bmc_ward_L": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20L-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_L.pdf",
+    "accessed_utc": "2026-10-22T12:20:52+00:00",
+    "bytes": 5689208,
+    "sha256": "a70c1b94c37ff329b42ee1963b2c71730833131c649b60232f199fb98a6f507f"
+  },
+  "bmc_ward_ME": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20ME-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_ME.pdf",
+    "accessed_utc": "2026-10-22T12:20:53+00:00",
+    "bytes": 4441750,
+    "sha256": "2f28623a99c53b771494b3dc3644b1580cb485a1f897ff41b79b63d6a8a1cb98"
+  },
+  "bmc_ward_MW": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20MW-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_MW.pdf",
+    "accessed_utc": "2026-10-22T12:20:55+00:00",
+    "bytes": 5712980,
+    "sha256": "64d932a385f052244ecdacdeaf2dc17b090762998fe518ba74a9b54c61d17ff9"
+  },
+  "bmc_ward_N": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20N-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_N.pdf",
+    "accessed_utc": "2026-10-22T12:20:57+00:00",
+    "bytes": 5088101,
+    "sha256": "ae7e0c4bfb2077f0cbb57ce138ffca3449a8077ebf69e1b6d776e7b1e464c348"
+  },
+  "bmc_ward_PN": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20PN-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_PN.pdf",
+    "accessed_utc": "2026-10-22T12:20:59+00:00",
+    "bytes": 7549146,
+    "sha256": "739ebdb60c47105113ca0f7bd44e9d94635c5e95459aaf25a443fa87fb217aeb"
+  },
+  "bmc_ward_PS": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20PS-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_PS.pdf",
+    "accessed_utc": "2026-10-22T12:21:00+00:00",
+    "bytes": 3499748,
+    "sha256": "b07eeab745f29e80adabb6dffbc6fd113df51580fd6ba439e0c7d7cc708174fd"
+  },
+  "bmc_ward_RC": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20RC-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_RC.pdf",
+    "accessed_utc": "2026-10-22T12:21:02+00:00",
+    "bytes": 5147052,
+    "sha256": "d7263d591f9240baa3c65de28eb84ccbcc87161a50141590f1e52d44a013a217"
+  },
+  "bmc_ward_RN": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20RN-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_RN.pdf",
+    "accessed_utc": "2026-10-22T12:21:03+00:00",
+    "bytes": 3917318,
+    "sha256": "ebee2dcdf48b006f134fab515887ef52a1f531e62683fd0dbe359502a0e955c6"
+  },
+  "bmc_ward_RS": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20RS-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_RS.pdf",
+    "accessed_utc": "2026-10-22T12:21:05+00:00",
+    "bytes": 5787959,
+    "sha256": "c125570fe89715c6dc9cdf71dcdbdcb99419359017c85c38de7ff35d380dd174"
+  },
+  "bmc_ward_S": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20S-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_S.pdf",
+    "accessed_utc": "2026-10-22T12:21:08+00:00",
+    "bytes": 11189659,
+    "sha256": "43a89fa708f1c19b70acfd4cd3f0415944fba195d3456d629d8ac666dc804719"
+  },
+  "bmc_ward_T": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/All%20Ward/Ward%20T-2021.pdf",
+    "file": "data/raw/bmc_fpg2026_ward/Ward_T.pdf",
+    "accessed_utc": "2026-10-22T12:21:09+00:00",
+    "bytes": 3113814,
+    "sha256": "c69a05203b6b0f7552fb13b58aaeeeec02dcf7359d9d705508a9ce8382771f2b"
+  },
+  "bmc_fpg2026_full": {
+    "url": "https://dm.mcgm.gov.in/assets/pdf/FPG%202021.pdf",
+    "file": "data/raw/bmc_fpg2026_full.pdf",
+    "accessed_utc": "2026-10-22T12:22:29+00:00",
+    "bytes": 622014131,
+    "sha256": "165462e11f0ccaee465cf1b09dc71e75e5ada64f43c3ddb8c009ec59904b85cd"
+  },
+  "best_dm_2026": {
+    "url": "https://www.bestundertaking.com/pdf/Disaster_Management_Protocol_Booklet_2026.pdf",
+    "file": "data/raw/best/Disaster_Management_Protocol_Booklet_2026.pdf",
+    "accessed_utc": "2026-10-22T12:22:33+00:00",
+    "bytes": 2571048,
+    "sha256": "5ea74021c180b6bd3b3f8f9fd5b85656f76b41a2370e49cecb9222257c7a3e80"
+  },
+  "best_dm_2024_25": {
+    "url": "https://www.bestundertaking.com/pdf/Disaster_Management_Protocol_Booklet_2024_25.pdf",
+    "file": "data/raw/best/Disaster_Management_Protocol_Booklet_2024_25.pdf",
+    "accessed_utc": "2026-10-22T12:22:35+00:00",
+    "bytes": 3239350,
+    "sha256": "aaf96b0bc564871b6b5a279fd1d6dd628fe693c484bf2b80ab3efa3196517682"
+  },
+  "best_dm_2023_24": {
+    "url": "https://www.bestundertaking.com/pdf/Disaster_Management_Protocol_Booklet_2023_24.pdf",
+    "file": "data/raw/best/Disaster_Management_Protocol_Booklet_2023_24.pdf",
+    "accessed_utc": "2026-10-22T12:22:36+00:00",
+    "bytes": 2877709,
+    "sha256": "d5d5cff5079d82e8733d58bbb3a94bc8adef799214c74fd9920801622ae9853b"
+  },
+  "datameet_bmc_wards": {
+    "url": "https://raw.githubusercontent.com/datameet/Municipal_Spatial_Data/master/Mumbai/BMC_Wards.geojson",
+    "file": "data/raw/BMC_Wards.geojson",
+    "accessed_utc": "2026-10-22T12:22:38+00:00",
+    "bytes": 994699,
+    "sha256": "f8472efd6bfd6c845a9d8c540c675ea41c173c03de61e8475353cd0dc8242f10"
+  },
+  "imd_monthly_opencity": {
+    "url": "https://data.opencity.in/dataset/c0e2f1ba-848a-4716-982b-d42636c44bf5/resource/3b1fcae7-b24f-431f-a259-64b56077acd5/download/6b7b0aed-e31d-433b-ba6d-b17b08a000df.csv",
+    "file": "data/raw/imd_mumbai_monthly_1901_2021.csv",
+    "accessed_utc": "2026-10-22T12:22:39+00:00",
+    "bytes": 13903,
+    "sha256": "6998146095d0864deb483fe558782f21f9c866c4fe7e6de693fdfd54266072cb"
+  },
+  "open_meteo_era5_santacruz": {
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=19.0896&longitude=72.8656&start_date=1991-01-01&end_date=2025-12-31&daily=precipitation_sum&timezone=Asia%2FKolkata&models=era5",
+    "file": "data/raw/open_meteo_era5_daily_santacruz.json",
+    "accessed_utc": "2026-10-22T12:22:41+00:00",
+    "bytes": 232281,
+    "sha256": "ac68e08735d8e06787d993c3bf0b79d7dcc1de6d97e178bc4ee5559cbff7be2d"
+  },
+  "open_meteo_era5_colaba": {
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=18.9067&longitude=72.8147&start_date=1991-01-01&end_date=2025-12-31&daily=precipitation_sum&timezone=Asia%2FKolkata&models=era5",
+    "file": "data/raw/open_meteo_era5_daily_colaba.json",
+    "accessed_utc": "2026-10-22T12:22:43+00:00",
+    "bytes": 232283,
+    "sha256": "001a3a1fe2aea39cbc3f6481342ead31ea541284c275cd6639e864bdf90f414d"
+  },
+  "census2011_opencity": {
+    "url": "https://data.opencity.in/dataset/1a81291d-369d-43e6-97b1-e62680434437/resource/fcfeacdc-aa80-4028-a468-f0267fa05d23/download/95e22d97-7f59-4214-b244-2abbf52e6027.csv",
+    "file": "data/raw/census2011_mumbai_wards.csv",
+    "accessed_utc": "2026-10-22T12:44:13+00:00",
+    "bytes": 15547,
+    "sha256": "26bdf7a094f00a1e70b94e9c1a2055948feb4b5627edff8d810139adf784c868"
+  }
+}

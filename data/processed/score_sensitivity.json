@@ -1,0 +1,46 @@
+{
+  "n_locations": 251,
+  "top_k": 20,
+  "n_weight_draws": 2000,
+  "seed": 20261022,
+  "default_weights": {
+    "ward_burden": 0.3333333333333333,
+    "corroboration": 0.3333333333333333,
+    "low_lying": 0.0,
+    "listing_density": 0.3333333333333333
+  },
+  "component_coverage": {
+    "ward_burden": 251,
+    "corroboration": 251,
+    "low_lying": 92,
+    "listing_density": 236
+  },
+  "spearman_default_vs_random_weights": {
+    "median": 0.778,
+    "p5": 0.527
+  },
+  "top20_jaccard_default_vs_random_weights": {
+    "median": 0.55,
+    "p5": 0.14
+  },
+  "locations_in_top20_in_at_least_80pct_of_draws": 4,
+  "ablation_drop_one_component": {
+    "ward_burden": {
+      "spearman_vs_default": 0.676,
+      "top20_jaccard": 0.14
+    },
+    "corroboration": {
+      "spearman_vs_default": 0.877,
+      "top20_jaccard": 0.5
+    },
+    "low_lying": {
+      "spearman_vs_default": 1.0,
+      "top20_jaccard": 1.0
+    },
+    "listing_density": {
+      "spearman_vs_default": 0.484,
+      "top20_jaccard": 0.14
+    }
+  },
+  "tier_rule": "A = top 20% of ranks, B = next 30%, C = remaining 50% (relative order, not risk level)"
+}

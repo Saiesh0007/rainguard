@@ -1,0 +1,176 @@
+[
+  {
+    "id": "F1",
+    "title": "10 of 15 suburban wards but 2 of 9 island-city wards are in the two highest incident classes - and ward population alone ranks wards with Spearman rho = 0.83",
+    "evidence_type": "historical",
+    "numbers": {
+      "wards_in_top_class_467_800": [
+        "F/N",
+        "H/E",
+        "K/E",
+        "K/W",
+        "L",
+        "N",
+        "P/N"
+      ],
+      "n_wards_top_class": 7,
+      "share_population_in_class_6_or_7_wards": 0.659,
+      "suburban_wards_in_class_6_or_7": 10,
+      "suburban_wards": 15,
+      "loo_mae_population_only": 0.732,
+      "loo_mae_median_baseline": 1.917,
+      "island_city_wards_max_class": 7,
+      "island_city_wards_in_class_6_or_7": [
+        "F/N",
+        "G/N"
+      ],
+      "spearman_population_vs_class": {
+        "rho": 0.835,
+        "p": 0.0
+      }
+    },
+    "method": "Ordinal incident class per ward digitised from BMC FPG 2026 p.18 (colour-matched to legend, 3 sample points per ward, 24/24 unanimous); population from Census 2011 aggregated to wards.",
+    "period": "2016-2023 per map legend (caption says 2016-2025)",
+    "sample": "24 legacy BMC wards",
+    "caveats": [
+      "Counts are complaint/incident records (source: 'CCS'), so they reflect reporting as well as flooding.",
+      "Only the class bin is known, not the exact count.",
+      "Census population is from 2011."
+    ],
+    "figure": "figures/f1_ward_incident_class.png"
+  },
+  {
+    "id": "F2",
+    "title": "Three official lists name 251 distinct places, but only 16 (6%) appear on more than one list",
+    "evidence_type": "historical (official listings)",
+    "numbers": {
+      "bmc_fpg2026_rows": 97,
+      "best_annex_rows": 84,
+      "mtp_location_rows": 90,
+      "unique_locations_after_merge": 251,
+      "locations_on_2_or_more_lists": 16,
+      "locations_on_all_3_lists": 1,
+      "by_source_combination": {
+        "BMC_FPG_2026": 84,
+        "MTP_DIVERSIONS_2026": 76,
+        "BEST_ANNEX_IX_2026": 75,
+        "BMC_FPG_2026|MTP_DIVERSIONS_2026": 8,
+        "BEST_ANNEX_IX_2026|MTP_DIVERSIONS_2026": 4,
+        "BEST_ANNEX_IX_2026|BMC_FPG_2026": 3,
+        "BEST_ANNEX_IX_2026|BMC_FPG_2026|MTP_DIVERSIONS_2026": 1
+      },
+      "best_rows_per_ward_where_bmc_lists_nil": {
+        "A": 9,
+        "B": 3,
+        "G/N": 4
+      },
+      "best_edition_text_similarity": {
+        "2023_24_vs_2024_25": 0.989,
+        "2024_25_vs_2026": 0.974
+      },
+      "bmc_sections_where_header_count_differs_from_rows": 3,
+      "within_source_duplicates": 3
+    },
+    "method": "Same-ward matching: fuzzy name tokens (Jaccard >= 0.5, >= 2 shared tokens) or geocodes within 250 m plus partial name match; never merging two records of one source. Edition similarity = word-level SequenceMatcher ratio of BEST Annex IX text.",
+    "period": "BMC FPG 2026 (incl. Mumbai Traffic Police table); BEST booklets 2023-24, 2024-25, 2026",
+    "sample": "97 BMC rows (24 wards), 84 BEST rows (9 island-city wards), 90 traffic-police rows (19 ward headings)",
+    "caveats": [
+      "The lists serve different purposes (BMC: dewatering pumps; BEST: switching off electricity; traffic police: diversions), so they need not match - but none can be treated as complete.",
+      "Name matching can miss the same place written very differently, so overlap may be understated."
+    ],
+    "figure": "figures/f2_source_overlap.png"
+  },
+  {
+    "id": "F3",
+    "title": "Monsoon rain is extremely concentrated, and global-model rainfall misses Mumbai's extremes",
+    "evidence_type": "observed (IMD gridded) and estimated (ERA5 reanalysis)",
+    "numbers": {
+      "imd_jjas_share_of_annual": 0.947,
+      "imd_mean_annual_mm": 2168.0,
+      "imd_annual_trend_mm_per_decade": 48.58,
+      "imd_annual_trend_p": 0.0004,
+      "era5_median_share_of_monsoon_rain_on_10_wettest_days": 0.359,
+      "era5_mean_heavy_days_per_year": 4.51,
+      "era5_heavy_days_trend_p": 0.3163,
+      "era5_2005_07_26_mm": 69.6,
+      "observed_2005_07_26_mm": 944,
+      "era5_to_imd_annual_ratio": 0.802,
+      "era5_imd_monthly_r": 0.94
+    },
+    "method": "IMD monthly grid 19.00N 72.75E (1901-2021); ERA5 daily via Open-Meteo (1991-2025); Theil-Sen slope + Kendall tau for trends; heavy day = IMD category >= 64.5 mm/24 h.",
+    "period": "1901-2021 (IMD), 1991-2025 (ERA5)",
+    "sample": "121 years IMD; 12784 days ERA5",
+    "caveats": [
+      "ERA5 is a ~25 km model estimate; both Mumbai reference points fall in one cell, so it cannot show rainfall differences between neighbourhoods.",
+      "The 944 mm figure is a station record quoted by BMC; ERA5 is an area average, so some gap is expected - the size of the gap is the point."
+    ],
+    "figure": "figures/f3_rainfall.png"
+  },
+  {
+    "id": "F4",
+    "title": "Terrain (90 m DEM) does not clearly separate listed spots from the rest of their ward",
+    "evidence_type": "estimated (DEM terrain) against historical listings",
+    "numbers": {
+      "point_or_street": {
+        "n": 92,
+        "tpi_pct_in_ward": {
+          "median": 0.443,
+          "mean": 0.458,
+          "share_below_0.5": 0.565,
+          "wilcoxon_p_vs_0.5": 0.17369
+        },
+        "elev_pct_in_ward": {
+          "median": 0.509,
+          "mean": 0.453,
+          "share_below_0.5": 0.478,
+          "wilcoxon_p_vs_0.5": 0.0717
+        }
+      },
+      "area_only": {
+        "n": 144,
+        "tpi_pct_in_ward": {
+          "median": 0.536,
+          "mean": 0.518,
+          "share_below_0.5": 0.479,
+          "wilcoxon_p_vs_0.5": 0.40579
+        },
+        "elev_pct_in_ward": {
+          "median": 0.49,
+          "mean": 0.534,
+          "share_below_0.5": 0.514,
+          "wilcoxon_p_vs_0.5": 0.16387
+        }
+      }
+    },
+    "method": "Copernicus GLO-90 DEM via Open-Meteo; TPI = elevation minus median of 500 m grid cells within 1 km; each location's percentile among its own ward's grid cells; Wilcoxon signed-rank vs 0.5.",
+    "period": "DEM 2021 release; listings 2026",
+    "sample": "92 point/street-precision locations; 144 area-only shown separately",
+    "caveats": [
+      "GLO-90 is a 90 m surface model including buildings; vertical error is metres.",
+      "Geocoding error (tens to hundreds of metres) blurs the comparison.",
+      "Listed spots are not a random sample of flooded places."
+    ],
+    "figure": "figures/f4_terrain_percentiles.png"
+  },
+  {
+    "id": "F5",
+    "title": "43 of 97 BMC-listed spots have no dewatering pump recorded against them",
+    "evidence_type": "historical (official listing, 2026)",
+    "numbers": {
+      "bmc_rows": 97,
+      "rows_with_pump_listed": 54,
+      "rows_without_pump_listed": 43,
+      "total_pumps_listed": 82,
+      "rows_marked_planning_stage": 4,
+      "rows_capacity_incomplete": 12
+    },
+    "method": "Direct counts from the transcribed BMC FPG 2026 ward directory.",
+    "period": "Monsoon 2026 preparedness",
+    "sample": "97 rows",
+    "caveats": [
+      "A blank pump cell may mean no pump, a pump recorded elsewhere, or a mitigated spot - the source does not say.",
+      "Capacity figures are incomplete for several multi-pump spots."
+    ],
+    "figure": null
+  }
+]

@@ -1,0 +1,50 @@
+record_id,reviewed_precision,reason
+FPG-L-9,area,matched Chunabhatti railway station; source names Samarth Nagar inside Chunabhatti
+FPG-ME-4,street,matched a generic point on Sion-Panvel Highway; source spot is on V N Purav Marg near TIFR Colony
+FPG-N-10,area,matched Kamraj Nagar flyover; source names a municipal school in Kamraj Nagar
+FPG-PE-1,area,matched Western Express Highway at Kurar; Pushpa Park not found in OSM
+FPG-RN-6,area,matched a housing society named Raj Maximus; not the same place as Raj Nagar
+FPG-RS-1,area,matched Noble Hospital; Maharashtra Nagar not found in OSM
+FPG-RS-6,area,matched a company office on the Western Express Highway; Poisar Subway not found in OSM
+FPG-S-4,area,matched a pharmacy; Gujarati cemetery not found in OSM
+FPG-T-1,street,matched Jain Mandir Marg (a road) rather than the junction
+FPG-FS-1,street,matched a school on Jagannath Bhatankar Marg; the spot is the road
+FPG-KW-4,area,matched the Irla locality; Irla Darshan Society not found in OSM
+FPG-N-2,area,matched a road inside the Ramabai Nagar settlement; settlement-level only
+FPG-RN-3,area,matched Anand Nagar locality
+FPG-S-7,area,matched Kannamwar Nagar locality
+FPG-FN-5,street,matched Road No 24 (a road)
+FPG-N-5,street,matched Shraddhanand Road (a road); hotel landmark not found
+BEST-1,area,matched the Geeta Nagar settlement; the source gives electric-pole numbers inside it
+BEST-2,area,matched the Geeta Nagar settlement; the source gives electric-pole numbers inside it
+BEST-3,area,matched the Geeta Nagar settlement; the source gives electric-pole numbers inside it
+BEST-4,area,matched the Geeta Nagar settlement; the source gives electric-pole numbers inside it
+BEST-16,street,matched Brig. Usman Marg (the road); stretch from Yagnik Chowk not resolvable
+BEST-22,street,matched a point off Nepean Sea Road; Kashinath Compound not found in OSM
+BEST-27,street,matched Tardeo Road (Javji Dadaji Marg); hotel landmark not found
+BEST-33,street,matched R S Nimkar Marg (a road)
+BEST-34,street,matched Patthe Bapurao Marg (a road); school landmark not found
+BEST-36,street,matched Sir J.J. Road (a road)
+BEST-38,street,matched T B Kadam Marg (a road); junction not resolved
+BEST-46,area,matched the E-ward office near Sankli Street; junction not resolved
+BEST-49,area,matched Mumbai Central via fallback; Alexandra Cinema not found in OSM
+BEST-52,street,matched a school on Jagannath Bhatankar Marg; the spot is the road
+BEST-64,street,matched Road No 6 (a road)
+BEST-79,area,matched the Coastal Road at Nehru Nagar; S.S. Amritwar Marg not found in OSM
+BEST-81,street,matched T.H. Kataria Marg (a road)
+MTP-2,area,matched the naval dockyard; M R A Marg not found in OSM
+MTP-16,area,matched a residential building named Krishna Nivas; the junction was not found
+MTP-26,street,matched a school on Ganpatrao Kadam Marg; the spot is the road near Shriram Mill
+MTP-28,street,matched N M Joshi Marg (a long road)
+MTP-32,street,matched a hotel on Senapati Bapat Marg (a long road)
+MTP-34,street,matched a statue on S V S Road (a long road)
+MTP-53,street,matched Carter Road (a road)
+MTP-57,street,matched M V Road (Andheri Kurla Road); the junction was not resolved
+MTP-60,street,matched S V Road (a long road)
+MTP-62,street,matched Linking Road (a long road)
+MTP-65,area,matched the Irla locality; the junction was not resolved
+MTP-67,street,matched J V P D bus station road; stretch from Indian Oil to J P Road junction not resolved
+MTP-70,street,matched L B S Marg (a long road)
+MTP-79,street,matched a generic point on the Sion-Panvel Highway
+MTP-82,street,matched Aarey Road (a road)
+MTP-85,street,matched a hospital on Akurli Road; Big Bazar landmark not found
