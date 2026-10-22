@@ -11,3 +11,4 @@ app/dist/
 app/*.tsbuildinfo
 .DS_Store
 HackAMatch_CityPulse_Problem_Statement.pdf
+.pytest_cache/
