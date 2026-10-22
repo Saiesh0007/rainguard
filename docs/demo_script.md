@@ -1,45 +1,71 @@
-# Five-minute demo script: CityPulse RainGuard
+# Five-minute video script: CityPulse RainGuard
 
-**Setup before you present:** run `cd app && npm run preview` (or open the deployed URL). Keep these tabs open: Map, Insights, Plan, Method. Have backup screenshots ready in case the basemap or forecast is offline. The app still works without them, because the list view and all evidence are local.
+**Before recording:** open the deployed app (or `cd app && npm run preview`) in a desktop browser window at about 1280 px wide, in light mode, on the **Map** tab. Close the place panel. Have the phone view ready (browser dev tools, or a phone). Speak at a steady pace: the narration is about 670 words, which fits five minutes with pauses for clicks.
+
+Each block gives the time, **what to show**, and the words to say.
 
 ---
 
-### 0:00–0:30 · Problem and user
-> "Mumbai has three official waterlogging lists. They name 251 places, and only 16 are on more than one. A BMC ward engineer with a few inspection teams has no single place to start: which places first, what to check there, and is tomorrow likely to be a heavy-rain day? RainGuard answers that from official evidence, and is honest about what it doesn't know."
+### 0:00–0:25 · Hook and user
+**Show:** the Map tab, full screen. Slowly move the mouse over the orange dots.
 
-Primary user: a BMC ward engineer or disaster-management officer planning the week's inspections. Secondary: residents and commuters (the map and "what you can do").
+> "Mumbai has three official lists of places that waterlog in the monsoon: from BMC, from BEST, and from the Mumbai Traffic Police. Together they name 251 places. Only 16 appear on more than one list.
+> So if you are a BMC ward engineer with a few inspection teams, where do you start? What should each team check? And is tomorrow likely to be a heavy-rain day? That is the decision RainGuard supports."
 
-### 0:30–1:15 · Data and its quality
-> "We first checked what free public data actually exists. There is **no public dataset of dated, located waterlogging events**, so we don't forecast waterlogging at places: there's nothing to validate it against. What we *can* forecast and test is the trigger: a city-wide heavy-rain day, from 55 years of IMD daily rainfall."
+### 0:25–1:05 · Data, and what it cannot do
+**Show:** click the **Method** tab. Scroll to **Feasibility decision**, then slowly down the **Sources** table.
 
-Show **Method → Sources**. Key points:
-* We found **three official 2026 lists**: BMC's Flood Preparedness Guidelines, BEST's flood-prone list, and the Mumbai Traffic Police diversion plan. We transcribed all 273 rows and verified them against the PDFs by OCR and text matching (no phone numbers; residents' names redacted).
-* We digitised BMC's ward incident map. Rainfall comes from IMD (1901–2021) and ERA5. Terrain comes from the Copernicus DEM.
-* **Strongest insight (Insights F2):** "These three lists name **251 distinct places, but only 16 appear on more than one list**. BMC says wards A, B and G/N have no waterlogging spots; BEST lists 16 there."
+> "We started by checking what free public data actually exists. The lists name places, but give no dates. BMC's incident data is only a ward-level map. And no free source records when and where waterlogging happened.
+> So RainGuard does not pretend to forecast flooding on a street. There is nothing to test that against, and we say so.
+> What we can test is the trigger: heavy rain. We use 55 years of IMD daily rainfall, and every source here is free, with its licence and access date, and no API keys."
 
-### 1:15–2:00 · Method, baseline, validation
-Show **Insights F1, F3, F4** and **Method → Evaluation**:
-* "Which wards record the most incidents? A **population-only baseline** predicts the ward incident class with an error of 0.73 classes, against 1.92 for the median baseline. Adding terrain doesn't help. **Recorded incidents mostly follow where people live.**"
-* "Is terrain a signal at street level? Listed places are slightly lower than their ward, but **not significantly** (p = 0.17), so terrain is off in our score by default."
-* "Global-model rainfall recorded **70 mm for 26 July 2005**, a day with **944 mm** at Santacruz. That's why we label the live forecast as third-party and never call it ours."
-* **Prediction (Method → heavy-rain outlook):** "Trained on 1971–2008, chosen on 2009–2016, tested once on 2017–2025. It beats both the monthly and the persistence baselines, with Brier skill 0.22 (95% interval 0.20 to 0.24) and AUC 0.85. Plain-language version: after a heavy-rain day, the next day is heavy 43% of the time, against 6% otherwise, so keep pumps in place." Also show the forecast's track record: a forecast of ≥ 64.5 mm caught only 5 of 33 heavy days in 2024–25, so we quote band frequencies instead.
-* Prioritisation: "A transparent, rule-based score: ward history, how many official lists agree, and nearby listings. We tested it with 2,000 random weightings, and we show how unstable the top of the list is. Ward history mostly follows population, so one click swaps in a population-adjusted version."
+### 1:05–1:50 · Findings
+**Show:** click **Insights**. Pause on **F2** (the bar chart of list combinations), then scroll to **F1**, then **F6**.
 
-### 2:00–4:30 · Live demo: signal → explanation → action
-1. **Map (citizen).** "Orange dots are listed places; hollow rings mean we only know the neighbourhood. Ward shading is incident history." Point out the 3-day **Rain outlook** card with its *Forecast* label.
-2. Search **"Hindmata"** and open it. Walk down the panel:
-   * *Historical:* named by BEST and the Traffic Police (not by BMC's 2026 list), with the **traffic diversion plan**.
-   * *Historical, ward-level:* F/S is class 4 of 7.
-   * *Forecast:* the city outlook. *Estimated:* exact map position; terrain marked unvalidated.
-   * *Unknown:* pump data, because it's not on BMC's list.
-   * **What you can do:** don't wade; leptospirosis advice from BMC; helpline 1916; "not being listed doesn't mean safe".
-3. Open **Worli Naka**, the only place on all three lists.
-4. Switch to **List** view to show the keyboard-accessible alternative. Search something unlisted to show the honest empty state.
-5. **Plan tab: "I have 20 inspection slots."** The weekly plan takes places in priority order, at most 3 per ward, so it covers 12 wards instead of 5. Each row says **what to check** (e.g. *No pump recorded: confirm whether a pump is assigned*). Drag the slider to 10 places, then click **"Adjust ward history for population"** and show which places drop out, and the *plan stability* column. "The labels don't depend on the weights; the order does, and we show by how much." **Download plan**.
-6. Toggle **dark mode** and show the phone layout (resize or use a phone).
+> "Three findings shape the product.
+> First, the lists disagree. BMC's 2026 list says wards A, B and G North have no waterlogging spots. BEST lists 16 places there.
+> Second, recorded incidents by ward mostly follow population. Population alone predicts a ward's incident class better than any model we tried, so we show that history as context, not as a hazard map.
+> Third, heavy rain clusters. After a heavy-rain day, the next day is heavy 43 percent of the time, against 6 percent otherwise."
 
-### 4:30–5:00 · Limitations and next steps
-> "What could make us wrong: the lists are undated and inconsistent, 144 places are only located to the neighbourhood, the outlook predicts rain, not water on the road, and free rainfall can't see neighbourhoods. We looked for dated disruption days and tide records and found none we could use. With BMC's dated complaint records and open rain-gauge and tide feeds, this becomes a validated, location-level early-warning model. Until then, RainGuard shows the evidence and its gaps honestly."
+### 1:50–2:30 · Prediction and how we tested it
+**Show:** click **Method**, scroll to **Evaluation: heavy-rain outlook**. Point at the test table, then the **Track record** table.
+
+> "Here is the prediction. Every morning at 8:30, using the rain just measured, it gives the chance that the next 24 hours are a heavy-rain day.
+> We trained it on 1971 to 2008, chose the model on 2009 to 2016, and tested it once on 2017 to 2025. It beats both baselines, the usual rate for the month and simple persistence, with a Brier skill of 0.22 and an AUC of 0.85.
+> We also checked the live weather forecast. When it said heavy rain, it caught only 5 of 33 heavy days in 2024 and 2025. So the app never repeats its label. It shows how often each forecast amount actually came true."
+
+### 2:30–3:35 · Live demo: the weekly plan
+**Show:** click the **Plan** tab. Point at the first rows of **This week's plan**, then at the **What to check** column, then the **Plan stability** column.
+
+> "This is the officer's screen. Twenty places this week, at most three from any one ward, so the teams cover 12 wards instead of 5.
+> Each row says what to check. Kurla Depot Junction: no pump recorded. Confirm whether one is assigned before the monsoon."
+
+**Show:** drag **Places your teams can inspect** down to **10**. Then click **Adjust ward history for population**, and watch the rows change.
+
+> "Fewer teams? Drag the slider. Prefer to discount wards that report a lot simply because many people live there? One click.
+> The order changes, and we show by how much. Worli Naka is on all three lists, but it stays in the plan in only 35 percent of weightings. The labels, though, come straight from the official lists, so the action does not depend on the weights."
+
+**Show:** click **Back to the default plan**, then **Download plan**.
+
+> "And the plan downloads as a spreadsheet the ward office can use."
+
+### 3:35–4:20 · One place, end to end
+**Show:** click **Map**. Type **Hindmata** in the search box and open **Hindmata Cinema**. Scroll slowly down the panel, pausing on each block heading.
+
+> "Now one place. Hindmata Cinema in ward F South.
+> What should a team check: it is named by BEST and the Traffic Police, but missing from BMC's own list. So: ask the ward to confirm it and add it.
+> Every block carries a label: historical, estimated, forecast or unknown. The traffic diversion plan is here. The pump information is marked unknown, because it is not on BMC's list.
+> And for residents: practical advice, the BMC helpline 1916, and a clear note that a road not on these lists is not guaranteed to be safe."
+
+**Show:** close the panel, switch to the phone layout for two seconds, then toggle dark mode.
+
+> "It works on a phone, and in dark mode."
+
+### 4:20–5:00 · Limits and close
+**Show:** click **Method**, scroll to **Limitations**. End on the Map tab.
+
+> "What could make us wrong? The lists are undated and incomplete. 144 places are only known to the neighbourhood. The outlook predicts rain, not water on the road, and only city-wide. We looked for tide records and official disruption dates, and found none we could use.
+> With BMC's dated complaint records and open rain-gauge data, this could become a real street-level early warning. Until then, RainGuard gives ward teams a ranked, explained plan, and tells them exactly how sure it is. Thank you."
 
 ---
 
