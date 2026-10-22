@@ -44,13 +44,14 @@ export default function Method({ data }: { data: RainGuardData }) {
       <section className="card">
         <h3>Sources</h3>
         <div className="table-scroll">
-          <table className="data-table">
+          <table className="data-table data-table--cards">
             <thead><tr><th scope="col">Source</th><th scope="col">Kind</th><th scope="col">Used for</th><th scope="col">Terms</th><th scope="col">Accessed (UTC)</th></tr></thead>
             <tbody>
               {data.sources.map((s) => (
                 <tr key={s.id}>
-                  <td><a href={s.url} target="_blank" rel="noreferrer">{s.name}</a><span className="fine block">{s.publisher}</span></td>
-                  <td>{s.kind}</td><td>{s.use}</td><td>{s.terms}</td><td>{s.accessed ?? "—"}</td>
+                  <td data-label="Source" className="cell-place"><a href={s.url} target="_blank" rel="noreferrer">{s.name}</a><span className="fine block">{s.publisher}</span></td>
+                  <td data-label="Kind">{s.kind}</td><td data-label="Used for">{s.use}</td><td data-label="Terms">{s.terms}</td>
+                  <td data-label="Accessed">{s.accessed ? s.accessed.slice(0, 10) : "—"}</td>
                 </tr>
               ))}
             </tbody>

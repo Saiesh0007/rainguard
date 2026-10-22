@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import type { RainGuardData, Weights } from "../types";
 import { COMPONENTS, COMPONENT_LABEL, rescore } from "../lib/score";
+import Icon from "./Icon";
 import { PRECISION_LABEL, SOURCE_SHORT, TIER_TEXT, sourcesOf } from "../lib/labels";
 
 interface Props {
@@ -88,14 +89,14 @@ export default function Civic({ data, onOpen }: Props) {
           </label>
           <label className="check"><input type="checkbox" checked={noPump} onChange={(e) => setNoPump(e.target.checked)} /> BMC spots with no pump listed</label>
           <label className="check"><input type="checkbox" checked={multi} onChange={(e) => setMulti(e.target.checked)} /> Named by 2+ lists</label>
-          <button className="btn" onClick={download}>Download CSV</button>
+          <button className="btn" onClick={download}><Icon name="download" size={16} />Download CSV</button>
         </div>
         <p className="muted" aria-live="polite">{rows.length} places match.</p>
         {rows.length === 0 ? (
           <p className="empty">No places match these filters.</p>
         ) : (
           <div className="table-scroll">
-            <table className="data-table">
+            <table className="data-table data-table--cards">
               <thead>
                 <tr><th scope="col">Rank</th><th scope="col">Place</th><th scope="col">Ward</th><th scope="col">Score</th>
                   <th scope="col">Why</th><th scope="col">Pumps</th><th scope="col" title="Share of 2,000 random weightings (default analysis) in which this place made the top 20">Top-20 stability</th></tr>
@@ -103,19 +104,19 @@ export default function Civic({ data, onOpen }: Props) {
               <tbody>
                 {rows.slice(0, limit).map((r) => (
                   <tr key={r.loc.location_id}>
-                    <td><span className={`tier tier--${r.tier}`} title={TIER_TEXT[r.tier]}>{r.tier}</span> {r.rank}</td>
-                    <td>
+                    <td data-label="Rank"><span className="rank"><span className={`tier tier--${r.tier}`} title={TIER_TEXT[r.tier]}>{r.tier}</span>{r.rank}</span></td>
+                    <td data-label="Place" className="cell-place">
                       <button className="link-btn" onClick={() => onOpen(r.loc.location_id)}>{r.loc.name}</button>
                       <span className="fine block">{PRECISION_LABEL[r.loc.geocode_precision]}</span>
                     </td>
-                    <td>{r.loc.ward}</td>
-                    <td>{r.score.toFixed(1)}</td>
-                    <td className="why">
+                    <td data-label="Ward">{r.loc.ward}</td>
+                    <td data-label="Score">{r.score.toFixed(1)}</td>
+                    <td data-label="Why" className="why">
                       class {r.loc.incident_class}/7 ward · {r.loc.n_sources} list{r.loc.n_sources > 1 ? "s" : ""}
                       {r.loc.neighbours_1km !== null ? ` · ${r.loc.neighbours_1km} nearby` : ""}
                     </td>
-                    <td>{r.loc.in_bmc_fpg_2026 ? (r.loc.pumps ?? "none") : "—"}</td>
-                    <td>{Math.round(r.loc.top20_frequency * 100)}%</td>
+                    <td data-label="Pumps">{r.loc.in_bmc_fpg_2026 ? (r.loc.pumps ?? "none") : "—"}</td>
+                    <td data-label="Top-20 stability">{Math.round(r.loc.top20_frequency * 100)}%</td>
                   </tr>
                 ))}
               </tbody>

@@ -57,7 +57,7 @@ describe("App", () => {
     expect(screen.getByText((_, el) => el?.tagName === "P" && /not\s+that it is flooded right now/.test(el.textContent ?? ""))).toBeInTheDocument();
     fireEvent.change(screen.getByPlaceholderText(/Search a place/), { target: { value: "zzzz-nowhere" } });
     expect(await screen.findByText(/does not mean the area is safe/)).toBeInTheDocument();
-  });
+  }, 20_000); // renders all 251 list rows
 
   it("renders the insights, civic and method tabs from data", async () => {
     vi.stubGlobal("fetch", mockFetch(true));

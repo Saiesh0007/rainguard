@@ -1,4 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import type { Location } from "../types";
+import Icon from "./Icon";
 import type { ForecastState } from "../lib/forecast";
 import { imdCategory } from "../lib/forecast";
 import EvidenceChip from "./EvidenceChip";
@@ -26,17 +28,42 @@ export default function LocationPanel({ loc, forecast, nLocations, onClose }: Pr
   const cat = imdCategory(peak);
   const precise = loc.geocode_precision === "point" || loc.geocode_precision === "street";
   const diversions = loc.traffic_diversion ? loc.traffic_diversion.split(" || ") : [];
+  const [copied, setCopied] = useState(false);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  // move focus into the panel when a new place opens (keyboard and screen-reader users)
+  useEffect(() => { titleRef.current?.focus({ preventScroll: true }); }, [loc.location_id]);
+
+  async function share() {
+    const url = `${window.location.origin}${window.location.pathname}#place=${loc.location_id}`;
+    try {
+      if (navigator.share) await navigator.share({ title: `${loc.name} · RainGuard`, url });
+      else {
+        await navigator.clipboard.writeText(url);
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 2000);
+      }
+    } catch { /* user cancelled share sheet */ }
+  }
 
   return (
     <article className="panel" aria-labelledby="panel-title">
       <header className="panel__head">
-        <div>
+        <div className="panel__title">
           <p className="eyebrow">Ward {loc.ward} · {loc.location_id}</p>
-          <h2 id="panel-title">{loc.name}</h2>
+          <h2 id="panel-title" tabIndex={-1} ref={titleRef}>{loc.name}</h2>
           {loc.detail && <p className="muted">{loc.detail}</p>}
         </div>
-        <button className="icon-btn" onClick={onClose} aria-label="Close details">✕</button>
+        <button className="icon-btn" onClick={onClose} aria-label="Close details"><Icon name="close" size={18} /></button>
       </header>
+      <div className="panel__actions">
+        <button className="btn btn--soft" onClick={share}><Icon name="share" size={16} />{copied ? "Link copied" : "Share"}</button>
+        {loc.lat !== null && loc.lon !== null && (
+          <a className="btn btn--soft" href={`https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lon}#map=17/${loc.lat}/${loc.lon}`} target="_blank" rel="noreferrer">
+            <Icon name="pin" size={16} />View on OpenStreetMap
+          </a>
+        )}
+        <a className="btn btn--soft" href="tel:1916"><Icon name="phone" size={16} />BMC 1916</a>
+      </div>
 
       <section className="panel__summary">
         <p>
