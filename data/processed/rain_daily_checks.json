@@ -1,0 +1,33 @@
+{
+  "years": [
+    1971,
+    2025
+  ],
+  "days": 20089,
+  "missing_days": {
+    "south_mm": 0,
+    "north_mm": 0
+  },
+  "monthly_vs_opencity_same_point": {
+    "n_months": 612,
+    "pearson_r": 0.995,
+    "median_abs_diff_mm": 0.0,
+    "ratio_total": 1.003
+  },
+  "jul_2005": {
+    "2005-07-25": {
+      "south_mm": 7.3,
+      "north_mm": 7.4
+    },
+    "2005-07-26": {
+      "south_mm": 6.9,
+      "north_mm": 10.6
+    },
+    "2005-07-27": {
+      "south_mm": 492.4,
+      "north_mm": 732.5
+    }
+  },
+  "jul_2005_reference": "BMC quotes 944 mm at Santacruz on 26 July 2005 (a point gauge; a 25 km cell averages it down)",
+  "date_convention": "IMD date D = 24 h ending 08:30 IST on D (the 26 July 2005 storm is recorded on 27 July)"
+}

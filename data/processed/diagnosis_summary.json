@@ -1,0 +1,41 @@
+{
+  "n_locations": 251,
+  "labels": {
+    "pump_gap": {
+      "cause": "drainage capacity",
+      "title": "No pump recorded",
+      "rule": "On BMC's 2026 list of waterlogging spots, with the dewatering-pump cell blank",
+      "check": "Confirm whether a pump is assigned, moved or no longer needed; record it before the monsoon",
+      "n": 42
+    },
+    "list_gap": {
+      "cause": "list coverage",
+      "title": "Missing from BMC's list",
+      "rule": "Named by BEST or the Traffic Police, but not by BMC's own 2026 list",
+      "check": "Ask the ward office to confirm the spot and add it to the BMC list, or record why not",
+      "n": 155
+    },
+    "corroborated": {
+      "cause": "drainage capacity",
+      "title": "Named by 2+ lists",
+      "rule": "Independent official lists agree on this place",
+      "check": "Pre-monsoon drain, culvert and outfall check",
+      "n": 16
+    },
+    "traffic_critical": {
+      "cause": "exposure",
+      "title": "Traffic diversion planned",
+      "rule": "Mumbai Traffic Police divert traffic here when it waterlogs",
+      "check": "Agree the alert contact with the traffic division before heavy-rain days",
+      "n": 89
+    },
+    "needs_location": {
+      "cause": "list coverage",
+      "title": "Exact spot unknown",
+      "rule": "The official name could only be placed at neighbourhood level, or not at all",
+      "check": "Field-verify the exact spot and record its coordinates",
+      "n": 159
+    }
+  },
+  "with_no_label": 7
+}

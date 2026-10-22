@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import type { Location } from "../types";
+import type { DiagnosisId, DiagnosisLabel, Location } from "../types";
+import { diagnosisOf } from "../lib/allocate";
 import Icon from "./Icon";
 import type { ForecastState } from "../lib/forecast";
 import { imdCategory } from "../lib/forecast";
@@ -13,6 +14,7 @@ interface Props {
   loc: Location;
   forecast: ForecastState;
   nLocations: number;
+  labels: Record<DiagnosisId, DiagnosisLabel>;
   onClose: () => void;
 }
 
@@ -22,7 +24,8 @@ function maxForecast(f: ForecastState): number | null {
   return v.length ? Math.max(...v) : null;
 }
 
-export default function LocationPanel({ loc, forecast, nLocations, onClose }: Props) {
+export default function LocationPanel({ loc, forecast, nLocations, labels, onClose }: Props) {
+  const dx = diagnosisOf(loc);
   const srcs = sourcesOf(loc);
   const peak = maxForecast(forecast);
   const cat = imdCategory(peak);
@@ -71,6 +74,18 @@ export default function LocationPanel({ loc, forecast, nLocations, onClose }: Pr
           authorities expect water here in heavy rain — <strong>not</strong> that it is flooded right now.
         </p>
       </section>
+
+      {dx.length > 0 && (
+        <section className="block">
+          <div className="block__head"><h3>What an inspection team should check</h3><EvidenceChip kind="historical" /></div>
+          <ul className="dx-checks">
+            {dx.map((d) => (
+              <li key={d}><strong>{labels[d].title}.</strong> {labels[d].check}. <span className="fine">Why: {labels[d].rule}.</span></li>
+            ))}
+          </ul>
+          <p className="fine">Rule-based labels read directly from the official lists and the geocoder; they do not depend on the priority weights.</p>
+        </section>
+      )}
 
       <section className="block">
         <div className="block__head"><h3>What the official records say</h3><EvidenceChip kind="historical" /></div>

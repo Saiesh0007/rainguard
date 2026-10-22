@@ -90,6 +90,20 @@ CSV of census wards with BMC ward names. The aggregated total of **12,442,373** 
 ### 1.11 Open-Meteo Forecast API (live, in the browser)
 A third-party 3-day precipitation forecast for one Mumbai point. CC BY 4.0, free for non-commercial use, no key. It is shown as a **third-party forecast**, never as a RainGuard prediction, with stale/offline states.
 
+### 1.12 IMD 0.25° daily gridded rainfall (added 23 October 2026)
+| | |
+|---|---|
+| Publisher | India Meteorological Department, Pune (Pai et al. 2014, *Mausam* 65(1)) |
+| URL | `https://www.imdpune.gov.in/cmpg/Griddata/Rainfall_25_Bin.html` (one binary file per year, form POST to `rainfall.php`) |
+| Contains | Daily rain (mm) on a 135 × 129 grid over India, 1901–2025. We download 1971–2025 and keep two cells: 19.00 N 72.75 E (island city, inner suburbs) and 19.25 N 72.75 E (northern suburbs). |
+| Type | **Observed** (gridded analysis of rain-gauge data). |
+| Quality | The 19.00 N 72.75 E monthly sums **equal the OpenCity IMD monthly series exactly** (it is the same grid point), checked in `rain_daily_checks.json`. Still a 25 km cell average, so it under-states point extremes. |
+| Terms | The download page states no licence. Used for non-commercial research with citation; the grids are not redistributed, only the extracted two-cell series (`data/processed/rain_daily_imd.csv`). |
+| Used for | The heavy-rain outlook (`analysis/predict.py`): training, chronological test, and the observed side of the forecast track record. |
+
+### 1.13 Open-Meteo Previous Runs API: archived day-ahead forecasts (added 23 October 2026)
+`precipitation_previous_day1` for the Santacruz point: the hourly forecast issued about one day earlier. **Archived only from 2024** (earlier years return nulls, checked for 2021–2023). CC BY 4.0, no key. Used only to measure the live forecast's track record against IMD over the 2024 and 2025 monsoons.
+
 ## 2. Sources checked and rejected
 
 | Source | Finding | Decision |
@@ -103,10 +117,12 @@ A third-party 3-day precipitation forecast for one Mumbai point. CC BY 4.0, free
 | **IMD station data (mausam.imd.gov.in)** | No free, bulk, machine-readable daily station download for Santacruz/Colaba. | Used the IMD gridded monthly data instead (1.6). |
 | **Research datasets** (crowdsourced Twitter flood maps, MCGM flooding-site lists used in papers) | Data not published, or licence unknown. | Not used. |
 | **Social media / news** | Not verified ground truth (Project.md §5). | Not used. |
+| **Official city disruption-day calendar** (checked 23 Oct 2026): railway suspensions, BMC rain holidays | No official, dated archive found. Central Railway and BMC statements survive mainly as quotes in news reports, which are not ground truth here. | Not built. The outlook therefore predicts heavy rain, not disruption. |
+| **Tide records** (checked 23 Oct 2026) | PSMSL Mumbai (Apollo Bandar, station 43) is **monthly mean sea level**, not daily high tides. BMC FPG 2026 (pp. 19–20) gives only *monthly counts* of days with tide > 4.5 m (18–28 a season, 2016–2025) and of days with rain > 100 mm **and** tide > 4.5 m (at most 5 a year, 0 in 7 of 10 years). Daily high-tide dates appear mostly in news reports. | Not used as a feature: no dated series, and too few coincidences to validate. BMC's counts are quoted as context. |
 
 ## 3. Feasibility decision
 
-**Risk prioritisation is feasible; forecasting is not.**
+**Risk prioritisation is feasible; location-level forecasting is not. A city-wide heavy-rain outlook is feasible and is tested chronologically (added 23 Oct 2026, §1.12).**
 
 * There are **no dated, located waterlogging events** in any free, lawful public source. Without a target label over time, no forecast can be trained or validated chronologically.
 * Incident history exists only as a **binned, ward-level, single-period map**. This allows a cross-sectional ward analysis (n = 24), but nothing at event level.

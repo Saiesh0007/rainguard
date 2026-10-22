@@ -1,0 +1,195 @@
+{
+  "heavy_mm": 64.5,
+  "observed_model": {
+    "target": "Tomorrow is a heavy-rain day: IMD gridded rain >= 64.5 mm in either Mumbai cell",
+    "season": "June-September (by tomorrow's date)",
+    "timing": "Issued at 08:30 IST from the 24 h just measured; predicts the next 24 h (IMD rain day)",
+    "split_years": {
+      "train": [
+        1971,
+        2008
+      ],
+      "validate": [
+        2009,
+        2016
+      ],
+      "test": [
+        2017,
+        2025
+      ]
+    },
+    "n_days": {
+      "train": 4636,
+      "validate": 976,
+      "test": 1098
+    },
+    "heavy_share": {
+      "train": 0.097,
+      "validate": 0.106,
+      "test": 0.132
+    },
+    "validation": {
+      "B0_climatology": {
+        "brier": 0.0921,
+        "brier_skill_vs_climatology": 0.0,
+        "auc": 0.659
+      },
+      "B1_persistence": {
+        "brier": 0.0846,
+        "brier_skill_vs_climatology": 0.081,
+        "auc": 0.664
+      },
+      "M1_logistic": {
+        "brier": 0.0782,
+        "brier_skill_vs_climatology": 0.15,
+        "auc": 0.838
+      },
+      "M2_logistic": {
+        "brier": 0.0773,
+        "brier_skill_vs_climatology": 0.16,
+        "auc": 0.846
+      }
+    },
+    "chosen_on_validation": "M2_logistic",
+    "test": {
+      "B0_climatology": {
+        "brier": 0.1122,
+        "brier_skill_vs_climatology": 0.0,
+        "auc": 0.648
+      },
+      "B1_persistence": {
+        "brier": 0.0992,
+        "brier_skill_vs_climatology": 0.116,
+        "auc": 0.686,
+        "brier_skill_95ci": [
+          0.078,
+          0.16
+        ]
+      },
+      "M1_logistic": {
+        "brier": 0.0882,
+        "brier_skill_vs_climatology": 0.214,
+        "auc": 0.845,
+        "brier_skill_95ci": [
+          0.19,
+          0.239
+        ]
+      },
+      "M2_logistic": {
+        "brier": 0.0875,
+        "brier_skill_vs_climatology": 0.22,
+        "auc": 0.85,
+        "brier_skill_95ci": [
+          0.201,
+          0.243
+        ]
+      }
+    },
+    "test_reliability_chosen": [
+      {
+        "bin": "0.00-0.05",
+        "n": 505,
+        "mean_predicted": 0.021,
+        "observed_share": 0.028
+      },
+      {
+        "bin": "0.05-0.10",
+        "n": 185,
+        "mean_predicted": 0.073,
+        "observed_share": 0.027
+      },
+      {
+        "bin": "0.10-0.20",
+        "n": 168,
+        "mean_predicted": 0.149,
+        "observed_share": 0.161
+      },
+      {
+        "bin": "0.20-0.30",
+        "n": 94,
+        "mean_predicted": 0.248,
+        "observed_share": 0.287
+      },
+      {
+        "bin": "0.30-0.50",
+        "n": 104,
+        "mean_predicted": 0.39,
+        "observed_share": 0.462
+      },
+      {
+        "bin": "0.50-1.00",
+        "n": 42,
+        "mean_predicted": 0.572,
+        "observed_share": 0.571
+      }
+    ],
+    "chosen_coefficients": {
+      "names": [
+        "intercept",
+        "log1p_rain_today",
+        "log1p_rain_3d",
+        "jul",
+        "aug",
+        "sep"
+      ],
+      "values": [
+        -5.3032,
+        1.0548,
+        0.0395,
+        0.0167,
+        -0.3556,
+        -0.6128
+      ]
+    },
+    "persistence_1971_2016": {
+      "p_heavy_tomorrow_if_heavy_today": 0.434,
+      "p_heavy_tomorrow_if_not_heavy_today": 0.062,
+      "n_heavy_today": 557
+    }
+  },
+  "forecast_track_record": {
+    "source": "Open-Meteo Previous Runs API, precipitation_previous_day1, Santacruz point (19.0896 N, 72.8656 E)",
+    "period": "2024-06-01 to 2025-09-30, June-September only",
+    "years": [
+      2024,
+      2025
+    ],
+    "n_days": 244,
+    "observed_heavy_days": 33,
+    "by_forecast_amount": [
+      {
+        "forecast": "under 15.6 mm",
+        "n_days": 128,
+        "heavy_days": 1,
+        "heavy_share": 0.008
+      },
+      {
+        "forecast": "15.6-35 mm",
+        "n_days": 80,
+        "heavy_days": 15,
+        "heavy_share": 0.188
+      },
+      {
+        "forecast": "35-64.5 mm",
+        "n_days": 28,
+        "heavy_days": 12,
+        "heavy_share": 0.429
+      },
+      {
+        "forecast": "64.5 mm or more",
+        "n_days": 8,
+        "heavy_days": 5,
+        "heavy_share": 0.625
+      }
+    ],
+    "forecast_ge_64_5mm": {
+      "hits": 5,
+      "misses": 28,
+      "false_alarms": 3,
+      "probability_of_detection": 0.152,
+      "false_alarm_ratio": 0.375
+    },
+    "correlation_fc_vs_observed": 0.593,
+    "caveat": "Two monsoons only; one forecast point vs the wetter of two 25 km observed cells. Shares are descriptive frequencies, not a validated probability model."
+  }
+}

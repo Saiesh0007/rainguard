@@ -1,6 +1,6 @@
 # Data statement
 
-Submission requirement: dataset links, access dates, licence/terms, fields used and preprocessing. Full details are in [`data_audit.md`](data_audit.md). Access times and hashes are in [`data/raw/manifest.json`](../data/raw/manifest.json). All sources were accessed on **22 October 2026**.
+Submission requirement: dataset links, access dates, licence/terms, fields used and preprocessing. Full details are in [`data_audit.md`](data_audit.md). Access times and hashes are in [`data/raw/manifest.json`](../data/raw/manifest.json). Sources were accessed on **22 October 2026**, except the IMD daily grids and archived forecasts, accessed on **23 October 2026**.
 
 | Dataset | Link | Licence / terms | Fields used | Preprocessing |
 |---|---|---|---|---|
@@ -10,6 +10,8 @@ Submission requirement: dataset links, access dates, licence/terms, fields used 
 | BEST DM Protocol Booklets 2023-24, 2024-25, 2026: Annexure IX | bestundertaking.com/pdf/Disaster_Management_Protocol_Booklet_*.pdf | public document; not redistributed | ward, road/area, location | Manual transcription (83/84 verified); residents' names redacted; edition comparison |
 | DataMeet BMC wards | github.com/datameet/Municipal_Spatial_Data (Mumbai/BMC_Wards.geojson) | CC BY-SA 2.5 IN | ward name, geometry | Simplified (0.0002°) for the app |
 | IMD gridded monthly rainfall (1901–2021) | data.opencity.in/dataset/mumbai-rainfall-data | Public domain (per OpenCity) | Year, monthly mm | Long format; checked monthly values sum to annual totals |
+| IMD 0.25° daily gridded rainfall (1971–2025) | imdpune.gov.in/cmpg/Griddata/Rainfall_25_Bin.html | No licence stated; non-commercial research use with citation (Pai et al. 2014); grids not redistributed | daily mm at 19.00 N/19.25 N, 72.75 E | Extracted two cells; no missing days; monthly sums checked against the OpenCity IMD series (same point, r = 0.995, median difference 0 mm); city value = wetter cell; date convention checked with 26 July 2005 |
+| Open-Meteo archived day-ahead forecasts (2024–2025) | previous-runs-api.open-meteo.com | CC BY 4.0 | hourly precipitation_previous_day1, Santacruz | Summed over the IMD rain day (08:30–08:30 IST); only complete 24-hour days kept |
 | ERA5 daily precipitation (1991–2025) | archive-api.open-meteo.com | CC BY 4.0 | date, precipitation_sum | Gap check; annual extremes by IMD category |
 | Copernicus GLO-90 DEM | api.open-meteo.com/v1/elevation | Copernicus DEM licence / CC BY 4.0 | elevation | 500 m grid; TPI vs 1 km neighbours |
 | Census 2011 ward population | data.opencity.in/dataset/mumbai-ward-wise-census-data | Public domain (per OpenCity) | Ward Name, Total Population | Summed by ward (total 12,442,373) |

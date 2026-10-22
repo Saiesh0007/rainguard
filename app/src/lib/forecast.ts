@@ -35,6 +35,15 @@ export function imdCategory(mm: number | null): { label: string; level: 0 | 1 | 
   return { label: "Extremely heavy rain", level: 5 };
 }
 
+/** Index into outlook.forecast_track_record.by_forecast_amount (analysis/predict.py FC_BINS: <15.6, <35, <64.5, more). */
+export function trackBand(mm: number | null): number | null {
+  if (mm === null) return null;
+  if (mm < 15.6) return 0;
+  if (mm < 35) return 1;
+  if (mm < 64.5) return 2;
+  return 3;
+}
+
 export function parseForecast(json: unknown, now = Date.now()): Forecast {
   const d = (json as { daily?: Record<string, unknown[]> }).daily;
   if (!d || !Array.isArray(d.time) || !Array.isArray(d.precipitation_sum)) {

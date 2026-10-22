@@ -31,7 +31,9 @@ export interface Location {
   incident_class: number;
   incidents_low: number;
   incidents_high: number;
+  incident_excess: number;
   ward_burden: number;
+  ward_excess: number;
   corroboration: number;
   low_lying: number | null;
   listing_density: number | null;
@@ -42,6 +44,73 @@ export interface Location {
   top20_frequency: number;
   rank_p10: number;
   rank_p90: number;
+  plan_frequency: number;
+  /** "|"-separated DiagnosisId values; "" when no label applies */
+  diagnosis: string;
+}
+
+export type DiagnosisId = "pump_gap" | "list_gap" | "corroborated" | "traffic_critical" | "needs_location";
+
+export interface DiagnosisLabel {
+  cause: string;
+  title: string;
+  rule: string;
+  check: string;
+  n: number;
+}
+
+export interface Allocation {
+  k: number;
+  cap_per_ward: number;
+  n_weight_draws: number;
+  rule: string;
+  default_plan: string[];
+  wards_in_default_plan: number;
+  wards_in_uncapped_top_k: number;
+  plan_jaccard_vs_default: { median: number; p5: number };
+  stable_core_threshold: number;
+  stable_core: string[];
+}
+
+export interface OutlookScore {
+  brier: number;
+  brier_skill_vs_climatology: number;
+  auc: number;
+  brier_skill_95ci?: [number, number];
+}
+
+export interface Outlook {
+  heavy_mm: number;
+  observed_model: {
+    target: string;
+    season: string;
+    split_years: Record<"train" | "validate" | "test", [number, number]>;
+    n_days: Record<string, number>;
+    heavy_share: Record<string, number>;
+    validation: Record<string, OutlookScore>;
+    chosen_on_validation: string;
+    test: Record<string, OutlookScore>;
+    test_reliability_chosen: { bin: string; n: number; mean_predicted: number; observed_share: number }[];
+    persistence_1971_2016: {
+      p_heavy_tomorrow_if_heavy_today: number;
+      p_heavy_tomorrow_if_not_heavy_today: number;
+      n_heavy_today: number;
+    };
+  };
+  forecast_track_record: {
+    source: string;
+    period: string;
+    years: number[];
+    n_days: number;
+    observed_heavy_days: number;
+    by_forecast_amount: { forecast: string; n_days: number; heavy_days: number; heavy_share: number | null }[];
+    forecast_ge_64_5mm: {
+      hits: number; misses: number; false_alarms: number;
+      probability_of_detection: number | null; false_alarm_ratio: number | null;
+    };
+    correlation_fc_vs_observed: number;
+    caveat: string;
+  };
 }
 
 export interface Ward {
@@ -59,6 +128,8 @@ export interface Ward {
   unique_locations: number;
   median_elevation_m: number;
   low_lying_share: number;
+  incident_class_expected_from_pop: number;
+  incident_excess: number;
 }
 
 export interface Finding {
@@ -131,7 +202,12 @@ export interface RainGuardData {
     spearman_default_vs_random_weights: { median: number; p5: number };
     top20_jaccard_default_vs_random_weights: { median: number; p5: number };
     ablation_drop_one_component: Record<string, { spearman_vs_default: number; top20_jaccard: number }>;
+    locations_in_top20_in_at_least_80pct_of_draws: number;
+    population_adjusted_alternative: { weights: Weights; spearman_vs_default: number; top20_jaccard_vs_default: number };
   };
+  diagnosis: { n_locations: number; labels: Record<DiagnosisId, DiagnosisLabel>; with_no_label: number };
+  allocation: Allocation;
+  outlook: Outlook;
   verification: Record<string, Record<string, unknown>>;
   cleaning: {
     unique_locations: number;
@@ -142,6 +218,7 @@ export interface RainGuardData {
 
 export interface Weights {
   ward_burden: number;
+  ward_excess: number;
   corroboration: number;
   low_lying: number;
   listing_density: number;

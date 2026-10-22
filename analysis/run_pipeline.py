@@ -19,9 +19,13 @@ STEPS = [
     "clean_data.py",             # validate, de-duplicate, cross-source match
     "terrain.py",                # DEM elevation + TPI (cached)
     "rainfall.py",               # IMD + ERA5 summaries
+    "rain_daily.py",             # IMD daily grids -> Mumbai series + checks (needs fetch_rain_daily.py)
     "features.py",               # ward and location features
     "evaluate.py",               # baselines vs models; terrain case-control
     "score.py",                  # prioritisation score + sensitivity
+    "diagnose.py",               # rule-based labels per place (no weights)
+    "allocate.py",               # K-place inspection plan with a ward cap + stability
+    "predict.py",                # heavy-rain outlook: chronological test + forecast track record
     "eda.py",                    # findings + figures
     "export_app_data.py",        # JSON for the web app
 ]
@@ -30,7 +34,7 @@ STEPS = [
 def main() -> None:
     steps = [[s] for s in STEPS]
     if "--fetch" in sys.argv:
-        steps.insert(0, ["fetch_data.py", "--full"])
+        steps[:0] = [["fetch_data.py", "--full"], ["fetch_rain_daily.py"]]
     for step in steps:
         print(f"\n=== {' '.join(step)} ===", flush=True)
         subprocess.run([sys.executable, str(HERE / step[0]), *step[1:]], check=True)

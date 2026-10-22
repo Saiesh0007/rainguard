@@ -93,16 +93,51 @@ A **rule-based relative ordering**, explicitly *not* a probability:
 
 | Component (0–1) | Definition | Evidence type |
 |---|---|---|
-| `ward_burden` | (incident class − 1) / 6 | historical, ward-level |
+| `ward_burden` | (incident class − 1) / 6. Mostly follows population (ρ = 0.835) | historical, ward-level |
+| `ward_excess` | incident class minus the class predicted from log population (OLS over the 24 wards), min–max scaled. **Optional, default 0** | historical, ward-level, adjusted |
 | `corroboration` | (number of official lists naming the place − 1) / 2 | historical |
 | `listing_density` | min(other listed records within 1 km, 10) / 10 | historical |
 | `low_lying` | 1 − TPI percentile within ward (precise geocodes only) | estimated, **unvalidated** |
 
-Score = 100 × weighted mean of the *available* components. Missing components are skipped, not zero-filled. **Default weights are ⅓, ⅓, ⅓ and 0 for `low_lying`**, because 7b found no significant terrain signal. Civic users can turn it on with a slider labelled "unvalidated".
+Score = 100 × weighted mean of the *available* components. Missing components are skipped, not zero-filled. **Default weights are ⅓ each for `ward_burden`, `corroboration` and `listing_density`, and 0 for `low_lying` and `ward_excess`.** `low_lying` is off because 7b found no significant terrain signal; users can turn it on with a slider labelled "unvalidated". `ward_excess` is off because, for inspection planning, wards where many people are exposed should count; the Plan tab offers a one-click "adjust ward history for population" view that swaps `ward_burden` for `ward_excess`.
 
 Tiers by rank: A = top 20%, B = next 30%, C = rest. Places tied at a cut-off go to the higher tier, so A currently holds 73 places.
 
-**Sensitivity:** 2,000 Dirichlet(1,1,1,1) random weightings (seed 20261022) give, per place, the share of draws in which it is in the top 20 and its 10th–90th percentile rank. Each component is also dropped in turn. The app's TypeScript re-implementation is tested to reproduce every Python score, rank and tier.
+**Sensitivity:** 2,000 Dirichlet(1,1,1,1,1) random weightings over all five components (seed 20261022) give, per place, the share of draws in which it is in the top 20 and its 10th–90th percentile rank. Each component is also dropped in turn. The app's TypeScript re-implementation is tested to reproduce every Python score, rank and tier.
+
+### 7d. Diagnosis labels (`diagnose.py`)
+Rule-based labels say *what to check*, and depend on no weights. A missing input never triggers a label.
+
+| Label | Rule | Check for the team |
+|---|---|---|
+| `pump_gap` | On BMC's 2026 list, pump cell blank | Confirm whether a pump is assigned, moved or no longer needed |
+| `list_gap` | On BEST or Traffic Police list, not on BMC's | Ask the ward to confirm and add it, or record why not |
+| `corroborated` | Named by 2+ lists | Pre-monsoon drain, culvert and outfall check |
+| `traffic_critical` | Traffic Police plan a diversion | Agree the alert contact with the traffic division |
+| `needs_location` | Area-only or unplaced geocode | Field-verify the spot and record coordinates |
+
+They follow JunkSnap's idea of separating causes, adapted to what the lists can show: **drainage capacity** (`pump_gap`, `corroborated`), **list coverage** (`list_gap`, `needs_location`) and **exposure** (`traffic_critical`, plus ward history in the score).
+
+### 7e. Weekly inspection plan (`allocate.py`)
+Greedy and transparent: walk down the priority order (ties broken by location id) and take each place unless its ward already has the cap; stop at K. Defaults K = 20, cap = 3. The plan is rebuilt for the same 2,000 random weightings, giving each place a *plan frequency*; places at ≥ 80% are the "stable core". `app/src/lib/allocate.ts` is tested to reproduce the default plan exactly.
+
+### 7f. Heavy-rain outlook (`rain_daily.py`, `predict.py`)
+**Target:** tomorrow is a heavy-rain day, IMD 0.25° gridded rain ≥ 64.5 mm in either Mumbai cell (19.00 N and 19.25 N, 72.75 E), June–September. This is the city-wide trigger BMC prepares for. **It is not a waterlogging forecast.**
+
+**Timing:** IMD's date D is the 24 hours ending 08:30 IST on D. This is confirmed by the 26 July 2005 storm, which is recorded on 27 July. The outlook is made at 08:30 from the 24 h just measured, for the next 24 h, so no feature uses future rain.
+
+**Split (chronological):** train 1971–2008, validate 2009–2016 (model choice), test 2017–2025 (used once, after refitting the chosen model on 1971–2016).
+
+| Model | Inputs |
+|---|---|
+| B0 climatology | share of heavy days for tomorrow's month (training years) |
+| B1 persistence | share of heavy tomorrows given today heavy / not heavy |
+| M1 logistic | log(1 + today's rain) |
+| M2 logistic | M1 + log(1 + last-3-day rain) + month |
+
+Metrics: Brier score, Brier skill score vs B0 with a 95% interval from resampling whole test years, ROC AUC, and a reliability table. Logistic regression is fitted by Newton–Raphson with a tiny ridge (no new dependency).
+
+**Forecast track record:** archived Open-Meteo day-ahead forecasts (`precipitation_previous_day1`, Santacruz point) are summed over the same IMD window and compared with observed heavy days for the 2024 and 2025 monsoons (the archive starts in 2024). This is descriptive: counts per forecast band, hits, misses and false alarms. The app's forecast card quotes it.
 
 ## 8. How the app presents evidence
 

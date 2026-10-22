@@ -149,6 +149,15 @@ details summary { cursor: pointer; }
 .chip--estimated { color: var(--chip-estimated); }
 .chip--forecast { color: var(--chip-forecast); }
 .chip--unknown { color: var(--chip-unknown); border-style: dashed; }
+
+/* diagnosis labels: text pills, the rule in the tooltip */
+.dx-list { display: inline-flex; flex-wrap: wrap; gap: .25rem; margin-bottom: .2rem; }
+.dx { font-size: .72rem; font-weight: 600; padding: .1rem .5rem; border-radius: 999px; background: var(--surface-2); color: var(--text-2); border: 1px solid var(--border); white-space: nowrap; }
+.dx--pump_gap, .dx--list_gap { color: var(--chip-forecast); }
+.dx--corroborated { color: var(--chip-historical); }
+.dx-checks { margin: .3rem 0; padding-left: 1.1rem; }
+.dx-checks li { margin: .35rem 0; }
+.track { font-size: .9rem; margin: .6rem 0 0; }
 .legend-list { list-style: none; padding: 0; display: grid; gap: .45rem; }
 
 /* ============ map page (mobile first) ============ */

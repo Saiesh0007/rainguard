@@ -1,0 +1,41 @@
+{
+  "k": 20,
+  "cap_per_ward": 3,
+  "n_weight_draws": 2000,
+  "seed": 20261022,
+  "rule": "Walk down the priority order and take each place unless its ward already has 3; stop at 20.",
+  "default_plan": [
+    "RG-063",
+    "RG-107",
+    "RG-158",
+    "RG-165",
+    "RG-116",
+    "RG-141",
+    "RG-060",
+    "RG-067",
+    "RG-168",
+    "RG-027",
+    "RG-033",
+    "RG-125",
+    "RG-129",
+    "RG-213",
+    "RG-014",
+    "RG-138",
+    "RG-204",
+    "RG-094",
+    "RG-039",
+    "RG-040"
+  ],
+  "wards_in_default_plan": 12,
+  "wards_in_uncapped_top_k": 5,
+  "plan_jaccard_vs_default": {
+    "median": 0.33,
+    "p5": 0.21
+  },
+  "stable_core_threshold": 0.8,
+  "stable_core": [
+    "RG-063",
+    "RG-116",
+    "RG-204"
+  ]
+}

@@ -229,5 +229,397 @@
     "accessed_utc": "2026-10-22T12:44:13+00:00",
     "bytes": 15547,
     "sha256": "26bdf7a094f00a1e70b94e9c1a2055948feb4b5627edff8d810139adf784c868"
+  },
+  "imd_daily_025_1971": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1971)",
+    "file": "data/raw/imd_daily/ind1971_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:52:49+00:00",
+    "bytes": 25425900,
+    "sha256": "781c0f3ee5bd0868d9a4868d4b9b5d042b44abc71f488ac9b67a15a8ae24c59b"
+  },
+  "imd_daily_025_1972": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1972)",
+    "file": "data/raw/imd_daily/ind1972_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:53:06+00:00",
+    "bytes": 25495560,
+    "sha256": "d926d7ae0851efe8e9080d0d476474e125cb5e5403ccdaedf0560e27bb1912b0"
+  },
+  "imd_daily_025_1973": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1973)",
+    "file": "data/raw/imd_daily/ind1973_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:53:24+00:00",
+    "bytes": 25425900,
+    "sha256": "c6a56d600d1d659d44f2715674d3ea8b601ef9fe8365d3fa98e5e82f3e5a88bf"
+  },
+  "imd_daily_025_1974": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1974)",
+    "file": "data/raw/imd_daily/ind1974_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:53:41+00:00",
+    "bytes": 25425900,
+    "sha256": "74b682299f1a3802808af37a1aabff2d637dd42797d628a3ae68371c9f2fb6f3"
+  },
+  "imd_daily_025_1975": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1975)",
+    "file": "data/raw/imd_daily/ind1975_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:53:59+00:00",
+    "bytes": 25425900,
+    "sha256": "690971cebf04695edfd1a70a7c61b8260dc4e8b7c00afd5e25bae1825ec87a78"
+  },
+  "imd_daily_025_1976": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1976)",
+    "file": "data/raw/imd_daily/ind1976_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:54:16+00:00",
+    "bytes": 25495560,
+    "sha256": "a7d55a21e5becd7022318f5efd5699dc155ac4620c6413738f3063c4b35628b0"
+  },
+  "imd_daily_025_1977": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1977)",
+    "file": "data/raw/imd_daily/ind1977_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:54:34+00:00",
+    "bytes": 25425900,
+    "sha256": "bdc098adc10d5d86df6c510501a065e036abc8b5ddc097eb6998df4a017503bd"
+  },
+  "imd_daily_025_1978": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1978)",
+    "file": "data/raw/imd_daily/ind1978_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:54:52+00:00",
+    "bytes": 25425900,
+    "sha256": "d66a2b0e7db104ee958345bc04b9353821c57290f179b8f72aebe323ce495552"
+  },
+  "imd_daily_025_1979": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1979)",
+    "file": "data/raw/imd_daily/ind1979_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:55:10+00:00",
+    "bytes": 25425900,
+    "sha256": "fb6ff9bab11168bd586eec116e1651ccd8caf6c624f1a78d3bcbbd64f1dd34b6"
+  },
+  "imd_daily_025_1980": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1980)",
+    "file": "data/raw/imd_daily/ind1980_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:55:27+00:00",
+    "bytes": 25495560,
+    "sha256": "cbf2651e0988506feab1571e4e66336f9b7e01ace35da6c0dd6d29a637b2650c"
+  },
+  "imd_daily_025_1981": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1981)",
+    "file": "data/raw/imd_daily/ind1981_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:55:44+00:00",
+    "bytes": 25425900,
+    "sha256": "78060465e12dacbf3de473045d72fd60a0dcc7a3278dfc48a0b54f5c13512f85"
+  },
+  "imd_daily_025_1982": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1982)",
+    "file": "data/raw/imd_daily/ind1982_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:56:02+00:00",
+    "bytes": 25425900,
+    "sha256": "0c5cd53892cbea7e66b030a8bf432c7095503137e35e75979124a9c581e9aa10"
+  },
+  "imd_daily_025_1983": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1983)",
+    "file": "data/raw/imd_daily/ind1983_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:56:19+00:00",
+    "bytes": 25425900,
+    "sha256": "bd24f975f5d2c64fe3f4062fceaa154e928a374e4e1ec25d389f86861cf2a92c"
+  },
+  "imd_daily_025_1984": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1984)",
+    "file": "data/raw/imd_daily/ind1984_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:56:37+00:00",
+    "bytes": 25495560,
+    "sha256": "eaed86f9bfd2e65fd3bea9ceb32c4e067473b62b61d4c1594386ce6d9d606945"
+  },
+  "imd_daily_025_1985": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1985)",
+    "file": "data/raw/imd_daily/ind1985_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:56:54+00:00",
+    "bytes": 25425900,
+    "sha256": "23119ee55f78cd4b0cd0007a308467c9b34087925700386325197fe38f4327ee"
+  },
+  "imd_daily_025_1986": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1986)",
+    "file": "data/raw/imd_daily/ind1986_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:57:11+00:00",
+    "bytes": 25425900,
+    "sha256": "73eb61027f0373e4140fea9a8195f99208fbe7c076fc9bdc0440e137ba4b320c"
+  },
+  "imd_daily_025_1987": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1987)",
+    "file": "data/raw/imd_daily/ind1987_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:57:28+00:00",
+    "bytes": 25425900,
+    "sha256": "a3cf9d4dd08ac5042d5d118baa88389deca25e7db78edb4a4fbc59cfe46e7aa4"
+  },
+  "imd_daily_025_1988": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1988)",
+    "file": "data/raw/imd_daily/ind1988_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:57:50+00:00",
+    "bytes": 25495560,
+    "sha256": "34445bd00b098c85221114e490f707fa623958f48e66ebebdb877fb3e5c831c5"
+  },
+  "imd_daily_025_1989": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1989)",
+    "file": "data/raw/imd_daily/ind1989_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:58:07+00:00",
+    "bytes": 25425900,
+    "sha256": "b41b0c095335638f2747f72960ed4e9518cc8b08cf4bde4db9ce3bf69f437d97"
+  },
+  "imd_daily_025_1990": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1990)",
+    "file": "data/raw/imd_daily/ind1990_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:58:25+00:00",
+    "bytes": 25425900,
+    "sha256": "405e89cc3c835b399e6f135d545225bc1a045a6fc0a47f0389f4c3d4ee86a074"
+  },
+  "imd_daily_025_1991": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1991)",
+    "file": "data/raw/imd_daily/ind1991_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:58:41+00:00",
+    "bytes": 25425900,
+    "sha256": "ae11b700154013b3d629d911197a432ca30b883b8bf79d7b8b1e2d1ae187f82a"
+  },
+  "imd_daily_025_1992": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1992)",
+    "file": "data/raw/imd_daily/ind1992_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:58:59+00:00",
+    "bytes": 25495560,
+    "sha256": "5b8f542bd1ae1792025dc38eb67023327dc6f1af2f1122832e7128cba34cb4c7"
+  },
+  "imd_daily_025_1993": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1993)",
+    "file": "data/raw/imd_daily/ind1993_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:59:16+00:00",
+    "bytes": 25425900,
+    "sha256": "acf30d074c16b4404c3dccc2f4be6a4bb812eda06acc86f70161bea7d7b37a8e"
+  },
+  "imd_daily_025_1994": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1994)",
+    "file": "data/raw/imd_daily/ind1994_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:59:34+00:00",
+    "bytes": 25425900,
+    "sha256": "ea431a0940e329e7ca607885d475a5350a0810076ac5846eaa303faa46576e6b"
+  },
+  "imd_daily_025_1995": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1995)",
+    "file": "data/raw/imd_daily/ind1995_rfp25.grd",
+    "accessed_utc": "2026-10-22T20:59:51+00:00",
+    "bytes": 25425900,
+    "sha256": "0b8f4b5884f6e9e51b8027a0727ea8c8a1cf94ef3bd7439d046a2787141d1302"
+  },
+  "imd_daily_025_1996": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1996)",
+    "file": "data/raw/imd_daily/ind1996_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:00:08+00:00",
+    "bytes": 25495560,
+    "sha256": "28ddc49f8af38bd9b6297f986a894d0a724cb6d9f00444ffd8daa4f9012baed1"
+  },
+  "imd_daily_025_1997": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1997)",
+    "file": "data/raw/imd_daily/ind1997_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:00:25+00:00",
+    "bytes": 25425900,
+    "sha256": "b1cb4b43da4434b833ad60e02ee63fd78734cd4b3d5eda9f21a9acfb2bb9bd44"
+  },
+  "imd_daily_025_1998": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1998)",
+    "file": "data/raw/imd_daily/ind1998_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:00:43+00:00",
+    "bytes": 25425900,
+    "sha256": "f481d8619e16438133899140a8d4bf40b552a2815f3f5ced28919f553d1b813a"
+  },
+  "imd_daily_025_1999": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=1999)",
+    "file": "data/raw/imd_daily/ind1999_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:01:00+00:00",
+    "bytes": 25425900,
+    "sha256": "a13672034666d04bbaa25f2248acb78f711c9faf58e1d412dd389a14854dfa68"
+  },
+  "imd_daily_025_2000": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2000)",
+    "file": "data/raw/imd_daily/ind2000_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:01:17+00:00",
+    "bytes": 25495560,
+    "sha256": "2f2b20a58c883e117467beb1767cd4bce4e517fef9d53f4b00318eea4ba2de25"
+  },
+  "imd_daily_025_2001": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2001)",
+    "file": "data/raw/imd_daily/ind2001_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:01:35+00:00",
+    "bytes": 25425900,
+    "sha256": "83185ebbab190a95c87bee058f36835de5758c24908805f85f2b3394a127fd37"
+  },
+  "imd_daily_025_2002": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2002)",
+    "file": "data/raw/imd_daily/ind2002_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:01:52+00:00",
+    "bytes": 25425900,
+    "sha256": "b138efce173261e6ede0ba06cbb90c1a21462222c44fd3dc46f6a85c24a1ca8b"
+  },
+  "imd_daily_025_2003": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2003)",
+    "file": "data/raw/imd_daily/ind2003_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:02:12+00:00",
+    "bytes": 25425900,
+    "sha256": "5542e3441278325c038d7933fc294087afb1acc75cd8d37c51e76ce4d6462d08"
+  },
+  "imd_daily_025_2004": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2004)",
+    "file": "data/raw/imd_daily/ind2004_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:02:30+00:00",
+    "bytes": 25495560,
+    "sha256": "8d671a7b4eeeb21802599d8b48ce34576093a2df46030ab2fac32228e62d4bc7"
+  },
+  "imd_daily_025_2005": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2005)",
+    "file": "data/raw/imd_daily/ind2005_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:02:48+00:00",
+    "bytes": 25425900,
+    "sha256": "8e22a50a30c92d9cb948cbcce8faa678b49c00f881e2c0eca77a353fb6670bd2"
+  },
+  "imd_daily_025_2006": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2006)",
+    "file": "data/raw/imd_daily/ind2006_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:03:06+00:00",
+    "bytes": 25425900,
+    "sha256": "79d1d9acb4da5614dc00991c03c114fa9031fa4e3bca9e9e32150472043f4cba"
+  },
+  "imd_daily_025_2007": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2007)",
+    "file": "data/raw/imd_daily/ind2007_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:03:25+00:00",
+    "bytes": 25425900,
+    "sha256": "6056e795aaa11f261ad2c4c781f1c5fe303c9d05cfc8f0afabd47d2fc49c5da8"
+  },
+  "imd_daily_025_2008": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2008)",
+    "file": "data/raw/imd_daily/ind2008_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:03:44+00:00",
+    "bytes": 25495560,
+    "sha256": "8c22bbde0d4753cdb9c142536d9498b3b21b2cb3fdbe48da29a20951fb9d3799"
+  },
+  "imd_daily_025_2009": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2009)",
+    "file": "data/raw/imd_daily/ind2009_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:04:02+00:00",
+    "bytes": 25425900,
+    "sha256": "1023548bcc409d95541e4b52f86ac37e7648cf2cd9c34ed42bf8ce0a45eb108e"
+  },
+  "imd_daily_025_2010": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2010)",
+    "file": "data/raw/imd_daily/ind2010_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:04:20+00:00",
+    "bytes": 25425900,
+    "sha256": "1db12d8eb5a471d3623ff448bdd72a25a3afc577c0b979233083e0c183a143d0"
+  },
+  "imd_daily_025_2011": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2011)",
+    "file": "data/raw/imd_daily/ind2011_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:04:38+00:00",
+    "bytes": 25425900,
+    "sha256": "1f656dc6498b8bcb8423ed8713b4b8469c0d66771b67bd2e985a3071240ac67b"
+  },
+  "imd_daily_025_2012": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2012)",
+    "file": "data/raw/imd_daily/ind2012_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:04:55+00:00",
+    "bytes": 25495560,
+    "sha256": "3f007292029a212edde5ee1ee618242c8f2a64062d80e196d20f9576e8f77381"
+  },
+  "imd_daily_025_2013": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2013)",
+    "file": "data/raw/imd_daily/ind2013_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:05:13+00:00",
+    "bytes": 25425900,
+    "sha256": "81bbab9f686bcd0c487e52a4fb54e4623efea198e74a742df5159a0977a8a02b"
+  },
+  "imd_daily_025_2014": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2014)",
+    "file": "data/raw/imd_daily/ind2014_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:05:31+00:00",
+    "bytes": 25425900,
+    "sha256": "1e89531d9772acbdd2e83fa8bb8972ef09a52f0e4ec6adbeb408b1d98a167b22"
+  },
+  "imd_daily_025_2015": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2015)",
+    "file": "data/raw/imd_daily/ind2015_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:05:49+00:00",
+    "bytes": 25425900,
+    "sha256": "72a9c97f58fb12d82d06ecdd821a9724865e48683c15a34d72f8804d244b9202"
+  },
+  "imd_daily_025_2016": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2016)",
+    "file": "data/raw/imd_daily/ind2016_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:06:06+00:00",
+    "bytes": 25495560,
+    "sha256": "7d47dd937eb68d3e64e77f20d40597eeebb4d5329704857f604c4c4618dbf838"
+  },
+  "imd_daily_025_2017": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2017)",
+    "file": "data/raw/imd_daily/ind2017_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:06:24+00:00",
+    "bytes": 25425900,
+    "sha256": "dc9109fc3c4c2dbcf8eea97114fa53a814ce677a8e64b567389f7d3da076c23a"
+  },
+  "imd_daily_025_2018": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2018)",
+    "file": "data/raw/imd_daily/ind2018_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:06:42+00:00",
+    "bytes": 25425900,
+    "sha256": "78ae74184b0ece2a9a03bb16cca6f7361abcae1e772ce3e6d685110b2af18c33"
+  },
+  "imd_daily_025_2019": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2019)",
+    "file": "data/raw/imd_daily/ind2019_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:07:01+00:00",
+    "bytes": 25425900,
+    "sha256": "dfb714184e16624cd43af8e932e3245c0d6cf1bacd9556e2cf44d962c9733f3f"
+  },
+  "imd_daily_025_2020": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2020)",
+    "file": "data/raw/imd_daily/ind2020_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:07:19+00:00",
+    "bytes": 25495560,
+    "sha256": "e19532760221e68711132c98f05cc3ceb7b399e55dbe9bd35b02589bbf2e46ff"
+  },
+  "imd_daily_025_2021": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2021)",
+    "file": "data/raw/imd_daily/ind2021_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:07:37+00:00",
+    "bytes": 25425900,
+    "sha256": "7f5128e82aa6d362b165898f7f5902d5edd12cb8265c71e2304f89053d5a2678"
+  },
+  "imd_daily_025_2022": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2022)",
+    "file": "data/raw/imd_daily/ind2022_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:07:54+00:00",
+    "bytes": 25425900,
+    "sha256": "9cd1654631ed918f55fbe12e08ef7c0593019c4a3399e695f0b0398283fcbb3e"
+  },
+  "imd_daily_025_2023": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2023)",
+    "file": "data/raw/imd_daily/ind2023_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:08:13+00:00",
+    "bytes": 25425900,
+    "sha256": "f308b916a4a2a57a66ce9d4987c60bb7756041434baed31f4342122dc3800ced"
+  },
+  "imd_daily_025_2024": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2024)",
+    "file": "data/raw/imd_daily/ind2024_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:08:31+00:00",
+    "bytes": 25495560,
+    "sha256": "09d3c89a084f13f3ec534170ce9d98fafc6ff8c29b87d1c83cc2fcd82b495601"
+  },
+  "imd_daily_025_2025": {
+    "url": "https://www.imdpune.gov.in/cmpg/Griddata/rainfall.php (POST rain=2025)",
+    "file": "data/raw/imd_daily/ind2025_rfp25.grd",
+    "accessed_utc": "2026-10-22T21:08:48+00:00",
+    "bytes": 25425900,
+    "sha256": "b4fa5ffb389496c0fa7d5a468d1cb47e4db0bcabcd11be4f273c0e6cfa7d611d"
+  },
+  "open_meteo_previous_runs_santacruz": {
+    "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=19.0896&longitude=72.8656&start_date=2024-01-01&end_date=2025-12-31&hourly=precipitation,precipitation_previous_day1&timezone=Asia%2FKolkata",
+    "file": "data/raw/open_meteo_previous_runs_santacruz.json",
+    "accessed_utc": "2026-10-22T21:08:52+00:00",
+    "bytes": 509161,
+    "sha256": "b5afdf22661adb2c4ecf4fbd3a7cec8b91c7b487e3446d26b93508e0d34a5876"
   }
 }

@@ -12,23 +12,23 @@
 
 ---
 
-## 0. Implementation status (22 October 2026)
+## 0. Implementation status (22 October 2026, updated 23 October 2026)
 
 The working implementation is in this repository. Where it differs from the plan below, **this section and the docs take precedence**.
 
 | Plan item | What was actually built |
 |---|---|
-| §5 Feasibility audit | Done: [`docs/data_audit.md`](docs/data_audit.md). **Decision: risk prioritisation feasible, forecasting not feasible.** No free public source has dated, located waterlogging events. BMC's 120-gauge rainfall API requires authentication (not used). ERA5 covers Mumbai with one 25 km cell. |
+| §5 Feasibility audit | Done: [`docs/data_audit.md`](docs/data_audit.md). **Decision: risk prioritisation feasible; location-level waterlogging forecasting not feasible; a city-wide heavy-rain outlook feasible and tested (added 23 Oct).** No free public source has dated, located waterlogging events. BMC's 120-gauge rainfall API requires authentication (not used). ERA5 covers Mumbai with one 25 km cell. |
 | Historical incidents | No event-level data exists. We use **three official 2026 listings** (BMC FPG 2026 ward directory, 97 rows; BEST Annex IX, 84 rows; Mumbai Traffic Police diversion table, 90 location rows), merged into **251 distinct places**, plus BMC's **ward-level incident map** (digitised into 7 ordinal classes). |
 | Rainfall | IMD gridded monthly (1901–2021, observed) and ERA5 daily (1991–2025, estimated) for context and a reliability check. A live Open-Meteo 3-day forecast is shown as **third-party**. |
 | Geographic context | DataMeet BMC ward boundaries (CC BY-SA 2.5 IN); Copernicus GLO-90 DEM; OSM Nominatim geocoding (one cached batch); OpenFreeMap basemap. |
-| §6 EDA | Five computed findings (F1–F5) in `data/processed/eda_findings.json`, the Insights screen and `docs/figures/`. |
-| §6 Baseline / model | Ward level: median and population baselines vs terrain/listing models, leave-one-ward-out CV with permutation tests (population baseline wins). Location level: within-ward terrain case-control (not significant). Prioritisation: rule-based score with sensitivity and ablation; **no predictive metric is claimed**. |
+| §6 EDA | Six computed findings (F1–F6) in `data/processed/eda_findings.json`, the Insights screen and `docs/figures/`. |
+| §6 Baseline / model | Ward level: median and population baselines vs terrain/listing models, leave-one-ward-out CV with permutation tests (population baseline wins). Location level: within-ward terrain case-control (not significant). Prioritisation: rule-based score with sensitivity and ablation, plus an optional population-adjusted ward factor; **no predictive metric is claimed for places**. Heavy-rain outlook (23 Oct): logistic model on IMD daily rain vs climatology and persistence baselines, chronological train/validate/test (1971–2008 / 2009–2016 / 2017–2025); test Brier skill 0.22 (95% CI 0.20–0.24). |
 | §8 P0 features | All built: responsive map with legend and list alternative, evidence panel with five evidence labels, charts, citizen guidance, methodology page, reproducible pipeline. Loading, empty, error, stale-forecast and offline-basemap states are implemented and tested. |
-| §8 P1 features | Civic prioritisation view with adjustable weights, ward/attribute filters, place search and CSV download. Route context was **not** built (no reliable free data). |
+| §8 P1 features | Plan view (23 Oct): weekly K-place inspection plan with a ward cap, rule-based "what to check" labels, plan stability, adjustable weights, filters and CSV downloads. Forecast card quotes the live forecast's 2024–25 track record. Route context was **not** built (no reliable free data). |
 | §10 Stack | Python pipeline (pandas, NumPy, SciPy, Shapely, PyMuPDF, Matplotlib); React + TypeScript + Vite + MapLibre GL; static JSON instead of an API. scikit-learn was not needed. |
-| §11 Structure | As planned, except: no notebook (the report is `docs/` plus the Insights screen); added `data/transcribed/` for hand transcriptions and review files. |
-| §12 Quality bar | pytest 21 passed; Vitest 35 passed; ESLint clean; production build succeeds; visual checks at 390/768/1440 px in light/dark. See [`docs/evaluation.md`](docs/evaluation.md). |
+| §11 Structure | As planned, plus `notebooks/01_findings.ipynb` (23 Oct; reads processed outputs only); added `data/transcribed/` for hand transcriptions and review files. |
+| §12 Quality bar | pytest 31 passed; Vitest 41 passed; ESLint clean; production build succeeds; visual checks at 390/768/1440 px in light/dark (22 Oct; not repeated after the 23 Oct additions). See [`docs/evaluation.md`](docs/evaluation.md). |
 
 Documentation: [`README.md`](README.md), [`docs/methodology.md`](docs/methodology.md), [`docs/evaluation.md`](docs/evaluation.md), [`docs/limitations.md`](docs/limitations.md), [`docs/data_statement.md`](docs/data_statement.md), [`docs/demo_script.md`](docs/demo_script.md) (includes judge Q&A).
 

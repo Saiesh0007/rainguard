@@ -17,7 +17,7 @@ type Tab = "map" | "insights" | "civic" | "method";
 const TABS: { id: Tab; label: string; icon: IconName }[] = [
   { id: "map", label: "Map", icon: "map" },
   { id: "insights", label: "Insights", icon: "chart" },
-  { id: "civic", label: "Civic", icon: "shield" },
+  { id: "civic", label: "Plan", icon: "shield" },
   { id: "method", label: "Method", icon: "info" },
 ];
 const STALE_DATA_DAYS = 365;
@@ -179,7 +179,7 @@ export default function App() {
                 <p className="muted small" aria-live="polite">{filtered.length} places · {mappedCount} on map{filtered.length - mappedCount ? ` · ${filtered.length - mappedCount} list-only` : ""}</p>
               </section>
 
-              <ForecastCard state={forecast} />
+              <ForecastCard state={forecast} track={data.outlook.forecast_track_record} />
               <Legend show={showWards} />
             </aside>
 
@@ -220,7 +220,7 @@ export default function App() {
                 <div className="backdrop" onClick={close} aria-hidden="true" />
                 <div className="sheet" role="dialog" aria-modal="false" aria-label={`Details for ${selectedLoc.name}`}>
                   <div className="sheet__handle" aria-hidden="true" />
-                  <LocationPanel loc={selectedLoc} forecast={forecast} nLocations={data.locations.length} onClose={close} />
+                  <LocationPanel loc={selectedLoc} forecast={forecast} nLocations={data.locations.length} labels={data.diagnosis.labels} onClose={close} />
                 </div>
               </>
             )}

@@ -59,13 +59,13 @@ describe("App", () => {
     expect(await screen.findByText(/does not mean the area is safe/)).toBeInTheDocument();
   }, 20_000); // renders all 251 list rows
 
-  it("renders the insights, civic and method tabs from data", async () => {
+  it("renders the insights, plan and method tabs from data", async () => {
     vi.stubGlobal("fetch", mockFetch(true));
     render(<App />);
     await screen.findByTestId("map-stub");
     fireEvent.click(screen.getByRole("button", { name: /Insights/ }));
     expect(await screen.findByText("F1", { exact: false })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: /Civic/ }));
+    fireEvent.click(screen.getByRole("button", { name: /Plan/ }));
     expect(await screen.findByText(/decision support, not an official directive/)).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: /Method/ }));
     expect(await screen.findByText(/location-level forecasting is not/)).toBeInTheDocument();

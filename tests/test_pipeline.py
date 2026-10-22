@@ -17,8 +17,11 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "analysis"))
 
+import allocate  # noqa: E402
 import clean_data  # noqa: E402
+import diagnose  # noqa: E402
 import evaluate  # noqa: E402
+import predict  # noqa: E402
 import score  # noqa: E402
 
 PROC = ROOT / "data" / "processed"
@@ -61,8 +64,8 @@ def test_union_find_merges_transitively():
 
 # ---------------- unit tests: scoring ----------------
 def _loc(**kw):
-    base = {"incident_class": 7, "n_sources": 1, "geocode_precision": "area", "tpi_pct_in_ward": 0.1,
-            "neighbours_1km": 4}
+    base = {"incident_class": 7, "incident_excess": 0.5, "n_sources": 1, "geocode_precision": "area",
+            "tpi_pct_in_ward": 0.1, "neighbours_1km": 4}
     base.update(kw)
     return pd.DataFrame([base])
 
@@ -74,8 +77,70 @@ def test_low_lying_only_for_precise_geocodes():
 
 def test_score_skips_missing_components_and_renormalises():
     c = score.components(_loc(geocode_precision="area", neighbours_1km=10, n_sources=3))
-    # ward_burden 1, corroboration 1, listing_density 1, low_lying missing -> 100 regardless of its weight
-    assert score.score(c, {"ward_burden": 1, "corroboration": 1, "low_lying": 1, "listing_density": 1}).iloc[0] == 100
+    # ward_burden 1, corroboration 1, listing_density 1; low_lying missing (area geocode) and ward_excess
+    # missing (min-max of a single ward is undefined) -> 100 regardless of their weights
+    w = {"ward_burden": 1, "ward_excess": 1, "corroboration": 1, "low_lying": 1, "listing_density": 1}
+    assert score.score(c, w).iloc[0] == 100
+
+
+def test_ward_excess_scales_population_residual_to_unit_range():
+    c = score.components(pd.concat([_loc(incident_excess=x) for x in (-1.0, 0.0, 1.0)]))
+    assert list(c.ward_excess) == [0, 0.5, 1]
+
+
+# ---------------- unit tests: diagnosis and plan ----------------
+def _dloc(**kw):
+    base = {"location_id": "RG-1", "in_bmc_fpg_2026": True, "in_best_annex_2026": False, "in_mtp_2026": False,
+            "pumps": np.nan, "n_sources": 1, "geocode_precision": "point"}
+    base.update(kw)
+    return pd.DataFrame([base])
+
+
+def test_pump_gap_needs_bmc_listing_and_blank_pump():
+    assert diagnose.diagnose(_dloc()).pump_gap.iloc[0]
+    assert not diagnose.diagnose(_dloc(pumps=2)).pump_gap.iloc[0]
+    # not on BMC's list -> pump information is unknown, never a gap
+    assert not diagnose.diagnose(_dloc(in_bmc_fpg_2026=False, in_mtp_2026=True)).pump_gap.iloc[0]
+
+
+def test_list_gap_and_location_labels():
+    d = diagnose.diagnose(_dloc(in_bmc_fpg_2026=False, in_best_annex_2026=True, geocode_precision="area")).iloc[0]
+    assert d.list_gap and d.needs_location and d.diagnosis == "list_gap|needs_location"
+
+
+def test_plan_respects_ward_cap_and_k():
+    rank = pd.Series([1, 2, 3, 4, 5])
+    ward = pd.Series(["A", "A", "A", "B", "B"])
+    ids = pd.Series(["p1", "p2", "p3", "p4", "p5"])
+    assert allocate.plan(rank, ward, ids, k=3, cap=2) == [0, 1, 3]
+    assert allocate.plan(rank, ward, ids, k=10, cap=1) == [0, 3]
+
+
+# ---------------- unit tests: heavy-rain outlook ----------------
+def test_logistic_fit_recovers_known_coefficients():
+    rng = np.random.default_rng(0)
+    x = rng.normal(size=20000)
+    X = np.column_stack([np.ones_like(x), x])
+    y = (rng.random(20000) < 1 / (1 + np.exp(-(-1 + 2 * x)))).astype(float)
+    assert np.allclose(predict.fit_logistic(X, y), [-1, 2], atol=0.1)
+
+
+def test_auc_perfect_and_random():
+    y = np.array([0, 0, 1, 1])
+    assert predict.auc(np.array([0.1, 0.2, 0.8, 0.9]), y) == 1
+    assert predict.auc(np.array([0.5, 0.5, 0.5, 0.5]), y) == 0.5
+
+
+def test_outlook_split_is_chronological_and_features_use_only_past():
+    s = predict.SPLIT
+    assert s["train"][1] < s["validate"][0] and s["validate"][1] < s["test"][0]
+    t = predict.daily_table()
+    d = pd.read_csv(PROC / "rain_daily_imd.csv", parse_dates=["date"]).set_index("date").city_max_mm
+    day = t.index[100]
+    # today's features equal observed rain up to today; the target is tomorrow's rain
+    assert t.loc[day, "rain_today"] == d[day]
+    assert t.loc[day, "rain_3d"] == pytest.approx(d[day - pd.Timedelta(days=2):day].sum())
+    assert t.loc[day, "y"] == float(d[day + pd.Timedelta(days=1)] >= predict.HEAVY_MM)
 
 
 def test_score_zero_weights_returns_zero_not_nan():
@@ -167,7 +232,7 @@ def test_transcriptions_verified_against_sources():
 
 def test_findings_are_computed_and_complete():
     f = json.loads((PROC / "eda_findings.json").read_text(encoding="utf8"))
-    assert len(f) >= 3
+    assert len(f) >= 6
     for x in f:
         assert x["method"] and x["period"] and x["sample"] and x["caveats"]
 
@@ -177,3 +242,20 @@ def test_priority_scores_match_default_weights():
     s = pd.read_csv(PROC / "priority_scores.csv")
     recomputed = score.score(score.components(loc), score.DEFAULT_WEIGHTS)
     assert np.allclose(recomputed.round(1).values, s.priority_score.values)
+
+
+def test_imd_daily_matches_opencity_monthly_series():
+    c = json.loads((PROC / "rain_daily_checks.json").read_text())["monthly_vs_opencity_same_point"]
+    assert c["n_months"] > 500 and c["pearson_r"] > 0.99 and c["median_abs_diff_mm"] == 0
+
+
+def test_outlook_test_years_were_not_used_for_model_choice():
+    o = json.loads((PROC / "outlook.json").read_text())["observed_model"]
+    assert o["chosen_on_validation"] in o["validation"]
+    assert o["split_years"]["test"][0] > o["split_years"]["validate"][1]
+
+
+def test_imd_date_convention_matches_26_july_2005():
+    # the record storm of 26 July 2005 must sit on 27 July (IMD day = 24 h ending 08:30 IST)
+    j = json.loads((PROC / "rain_daily_checks.json").read_text())["jul_2005"]
+    assert j["2005-07-27"]["north_mm"] > 300 > j["2005-07-26"]["north_mm"]

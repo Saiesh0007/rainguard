@@ -28,11 +28,11 @@ describe("client-side score matches analysis/score.py", () => {
 describe("scoring rules", () => {
   const base = data.locations[0];
   it("skips missing components instead of treating them as zero", () => {
-    const loc = { ...base, ward_burden: 1, corroboration: 1, low_lying: null, listing_density: 1 };
-    expect(priorityScore(loc, { ward_burden: 1, corroboration: 1, low_lying: 1, listing_density: 1 })).toBe(100);
+    const loc = { ...base, ward_burden: 1, ward_excess: 1, corroboration: 1, low_lying: null, listing_density: 1 };
+    expect(priorityScore(loc, { ward_burden: 1, ward_excess: 1, corroboration: 1, low_lying: 1, listing_density: 1 })).toBe(100);
   });
   it("returns 0 when every weight is zero", () => {
-    expect(priorityScore(base, { ward_burden: 0, corroboration: 0, low_lying: 0, listing_density: 0 })).toBe(0);
+    expect(priorityScore(base, { ward_burden: 0, ward_excess: 0, corroboration: 0, low_lying: 0, listing_density: 0 })).toBe(0);
   });
   it("gives tied scores the same (lowest) rank", () => {
     expect(rankScores([10, 50, 50, 20])).toEqual([4, 1, 1, 3]);

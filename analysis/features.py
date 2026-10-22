@@ -68,6 +68,13 @@ def main() -> None:
     wards["grid_cells"] = g.size()
     wards["median_elevation_m"] = g.elevation_m.median().round(1)
     wards["low_lying_share"] = g.tpi_m.apply(lambda s: float((s.dropna() <= LOW_TPI_M).mean())).round(3)
+    # Incident class mostly follows population (evaluate.py: rho = 0.835). The residual of an OLS fit of
+    # class on log population says how far a ward's recorded burden is above or below what its
+    # population alone would suggest. Descriptive, fitted on all 24 wards: an adjustment, not a forecast.
+    A = np.column_stack([np.ones(len(wards)), np.log(wards.population_2011)])
+    coef, *_ = np.linalg.lstsq(A, wards.incident_class.astype(float), rcond=None)
+    wards["incident_class_expected_from_pop"] = (A @ coef).round(3)
+    wards["incident_excess"] = (wards.incident_class - wards.incident_class_expected_from_pop).round(3)
     assert wards.incident_class.notna().all() and wards.population_2011.notna().all()
     wards.to_csv(PROC / "ward_stats.csv")
 
@@ -102,7 +109,7 @@ def main() -> None:
         d = np.hypot(*(pts[mapped.values] - pts[i]).T)
         neigh.append(int((d <= NEIGHBOUR_RADIUS_M).sum() - 1))
     loc["neighbours_1km"] = neigh
-    loc = loc.join(wards[["incident_class", "incidents_low", "incidents_high"]], on="ward")
+    loc = loc.join(wards[["incident_class", "incidents_low", "incidents_high", "incident_excess"]], on="ward")
     loc.to_csv(PROC / "location_features.csv", index=False, encoding="utf8")
     print(wards.to_string())
     print(loc[["elevation_m", "tpi_m", "tpi_pct_in_ward", "neighbours_1km"]].describe().round(2))

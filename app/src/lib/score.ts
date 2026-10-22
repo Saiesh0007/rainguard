@@ -2,11 +2,12 @@
 // tests/score.test.ts checks it reproduces the exported Python scores exactly.
 import type { Location, Weights } from "../types";
 
-export const COMPONENTS = ["ward_burden", "corroboration", "low_lying", "listing_density"] as const;
+export const COMPONENTS = ["ward_burden", "ward_excess", "corroboration", "low_lying", "listing_density"] as const;
 export type Component = (typeof COMPONENTS)[number];
 
 export const COMPONENT_LABEL: Record<Component, string> = {
-  ward_burden: "Ward incident history",
+  ward_burden: "Ward incident history (mostly follows population)",
+  ward_excess: "Ward incidents beyond what population explains",
   corroboration: "Named by several official lists",
   low_lying: "Lower than surroundings (unvalidated)",
   listing_density: "Other listed places within 1 km",

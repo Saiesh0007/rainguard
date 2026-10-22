@@ -51,12 +51,19 @@ export default function Insights({ data }: { data: RainGuardData }) {
   const f4 = data.evaluation.location_terrain_case_control.point_or_street;
   const f5 = byId.F5.numbers as Record<string, number>;
   const f1 = byId.F1.numbers as Record<string, unknown>;
+  const f6 = byId.F6.numbers as {
+    persistence: { p_heavy_tomorrow_if_heavy_today: number; p_heavy_tomorrow_if_not_heavy_today: number };
+    heavy_days_per_year: Record<string, number>;
+    test_brier_skill: number;
+    test_brier_skill_95ci: [number, number] | null;
+    test_years: [number, number];
+  };
 
   return (
     <div className="page">
       <header className="page__head">
         <h2>Insights</h2>
-        <p className="lead">Five findings computed from the real data by <code>analysis/eda.py</code>. Each lists its method, period, sample and caveats.</p>
+        <p className="lead">Six findings computed from the real data by <code>analysis/eda.py</code>. Each lists its method, period, sample and caveats.</p>
       </header>
 
       <Card f={byId.F1}>
@@ -136,6 +143,23 @@ export default function Insights({ data }: { data: RainGuardData }) {
           <Stat value={String(f5.total_pumps_listed)} label="pumps listed across all BMC spots" />
           <Stat value={String(f5.rows_marked_planning_stage)} label="spots whose works are marked 'planning stage'" />
         </div>
+      </Card>
+
+      <Card f={byId.F6}>
+        <div className="stats">
+          <Stat value={`${Math.round(f6.persistence.p_heavy_tomorrow_if_heavy_today * 100)}%`} label="chance the day after a heavy-rain day is also heavy (June–September)" />
+          <Stat value={`${Math.round(f6.persistence.p_heavy_tomorrow_if_not_heavy_today * 100)}%`} label="chance after any other monsoon day" />
+          <Stat value={f6.test_brier_skill.toFixed(2)} label={`outlook skill vs the monthly baseline on ${f6.test_years[0]}–${f6.test_years[1]}${f6.test_brier_skill_95ci ? ` (95%: ${f6.test_brier_skill_95ci[0]} to ${f6.test_brier_skill_95ci[1]})` : ""}`} />
+        </div>
+        <p className="note">
+          For planners: after a heavy-rain day, keep pumps and teams in place for the next day. The outlook is city-wide and about rain,
+          not about water on a particular road.
+        </p>
+        <BarChart
+          title="Heavy-rain days per year, IMD gridded daily"
+          valueLabel="heavy-rain days"
+          bars={Object.entries(f6.heavy_days_per_year).map(([y, n]) => ({ label: y, value: n }))}
+        />
       </Card>
     </div>
   );

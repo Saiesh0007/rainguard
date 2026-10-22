@@ -40,12 +40,14 @@ def main() -> None:
     loc = pd.read_csv(PROC / "location_features.csv")
     scores = pd.read_csv(PROC / "priority_scores.csv")
     loc = loc.merge(scores, on="location_id", validate="one_to_one")
+    loc = loc.merge(pd.read_csv(PROC / "diagnosis.csv", keep_default_na=False), on="location_id", validate="one_to_one")
     keep = ["location_id", "name", "detail", "ward", "sources", "n_sources", "record_ids", "in_bmc_fpg_2026",
             "in_best_annex_2026", "in_mtp_2026", "traffic_diversion", "lat", "lon", "geocode_precision", "geocode_osm_name", "geocode_note",
             "project_category", "pumps", "capacity_listed_m3hr", "capacity_complete", "elevation_m", "tpi_m",
             "tpi_pct_in_ward", "neighbours_1km", "incident_class", "incidents_low", "incidents_high",
-            "ward_burden", "corroboration", "low_lying", "listing_density", "components_available",
-            "priority_score", "priority_rank", "priority_tier", "top20_frequency", "rank_p10", "rank_p90"]
+            "incident_excess", "ward_burden", "ward_excess", "corroboration", "low_lying", "listing_density",
+            "components_available", "priority_score", "priority_rank", "priority_tier", "top20_frequency",
+            "rank_p10", "rank_p90", "plan_frequency", "diagnosis"]
     wards = pd.read_csv(PROC / "ward_stats.csv")
 
     def accessed(src_id: str) -> str | None:
@@ -74,6 +76,15 @@ def main() -> None:
          "publisher": "India Meteorological Department, via OpenCity", "url": "https://data.opencity.in/dataset/mumbai-rainfall-data",
          "accessed": accessed("imd_monthly_opencity"), "kind": "observed", "use": "Rainfall climatology and trend",
          "terms": "Listed by OpenCity as public domain (Government data)"},
+        {"id": "imd_daily", "name": "IMD 0.25° daily gridded rainfall (1971-2025), two Mumbai cells",
+         "publisher": "India Meteorological Department, Pune (Pai et al. 2014)",
+         "url": "https://www.imdpune.gov.in/cmpg/Griddata/Rainfall_25_Bin.html", "accessed": accessed("imd_daily_025_2025"),
+         "kind": "observed", "use": "Heavy-rain outlook: model training and chronological test; forecast track record",
+         "terms": "No licence stated on the download page; used for non-commercial research with citation. Grids not redistributed."},
+        {"id": "open_meteo_previous_runs", "name": "Open-Meteo archived day-ahead forecasts (2024-2025)",
+         "publisher": "Open-Meteo Previous Runs API", "url": "https://open-meteo.com/en/docs/previous-runs-api",
+         "accessed": accessed("open_meteo_previous_runs_santacruz"), "kind": "forecast (third-party)",
+         "use": "Track record of the live forecast against observed IMD heavy-rain days", "terms": "CC BY 4.0"},
         {"id": "era5", "name": "ERA5 reanalysis daily precipitation (1991-2025)",
          "publisher": "ECMWF / Copernicus, via Open-Meteo Historical Weather API",
          "url": "https://open-meteo.com/en/docs/historical-weather-api", "accessed": accessed("open_meteo_era5_santacruz"),
@@ -106,6 +117,9 @@ def main() -> None:
         },
         "evaluation": json.loads((PROC / "evaluation.json").read_text()),
         "sensitivity": json.loads((PROC / "score_sensitivity.json").read_text()),
+        "diagnosis": json.loads((PROC / "diagnosis_summary.json").read_text()),
+        "allocation": json.loads((PROC / "allocation.json").read_text()),
+        "outlook": json.loads((PROC / "outlook.json").read_text()),
         "cleaning": json.loads((PROC / "cleaning_log.json").read_text(encoding="utf8"))["outputs"],
         "verification": json.loads((PROC / "transcription_verification.json").read_text()),
     }

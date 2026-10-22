@@ -250,6 +250,46 @@ def main() -> None:
     }
     findings.append(f5)
 
+    # ---------- F6: heavy-rain days cluster (IMD daily, the basis of the outlook in predict.py) ----------
+    daily = pd.read_csv(PROC / "rain_daily_imd.csv", parse_dates=["date"])
+    outlook = json.loads((PROC / "outlook.json").read_text())
+    om = outlook["observed_model"]
+    per = om["persistence_1971_2016"]
+    hv = daily.assign(year=daily.date.dt.year, heavy=daily.city_max_mm >= outlook["heavy_mm"])
+    per_year = hv.groupby("year").heavy.sum().astype(int)
+    chosen = om["test"][om["chosen_on_validation"]]
+    f6 = {
+        "id": "F6", "title": (
+            f"After a heavy-rain day, the next day is heavy {per['p_heavy_tomorrow_if_heavy_today']:.0%} of the time, "
+            f"against {per['p_heavy_tomorrow_if_not_heavy_today']:.0%} after other monsoon days"),
+        "evidence_type": "observed (IMD gridded daily rainfall)",
+        "numbers": {
+            "persistence": per,
+            "heavy_days_per_year": {str(k): int(v) for k, v in per_year.items()},
+            "chosen_model": om["chosen_on_validation"],
+            "test_brier_skill": chosen["brier_skill_vs_climatology"],
+            "test_brier_skill_95ci": chosen.get("brier_skill_95ci"),
+            "test_auc": chosen["auc"],
+            "test_years": om["split_years"]["test"],
+        },
+        "method": "Heavy-rain day = IMD 0.25 deg gridded rain >= 64.5 mm in either Mumbai cell. Conditional shares over "
+                  "June-September days, 1971-2016; outlook model tested on later years only (predict.py).",
+        "period": "IMD daily 1971-2025; persistence from 1971-2016; test " + "-".join(map(str, om["split_years"]["test"])),
+        "sample": f"{per['n_heavy_today']} heavy-rain days in 1971-2016; {om['n_days']['test']} test days",
+        "caveats": ["A 25 km cell average under-states point extremes (26 July 2005, Santacruz).",
+                    "Heavy rain is the trigger, not the outcome: waterlogging also depends on drains, tide and pumps.",
+                    "City-wide only: it cannot say which neighbourhood will flood."],
+        "figure": "figures/f6_heavy_rain_days.png",
+    }
+    findings.append(f6)
+    fig, ax = plt.subplots(figsize=(9, 3.2))
+    ax.bar(per_year.index, per_year.values, color=S1, width=0.8)
+    ax.set_ylabel("Heavy-rain days")
+    ax.set_title("Heavy-rain days per year in Mumbai (IMD gridded, >= 64.5 mm in either city cell)", loc="left", fontsize=10)
+    fig.tight_layout()
+    fig.savefig(FIG / "f6_heavy_rain_days.png")
+    plt.close(fig)
+
     (PROC / "eda_findings.json").write_text(json.dumps(findings, indent=2, ensure_ascii=False), encoding="utf8")
     for f in findings:
         print(f"{f['id']}: {f['title']}\n   {json.dumps(f['numbers'])}")
