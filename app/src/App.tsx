@@ -9,12 +9,14 @@ import LocationPanel from "./components/LocationPanel";
 import Insights from "./components/Insights";
 import Civic from "./components/Civic";
 import Method from "./components/Method";
+import Home from "./components/Home";
 import Icon, { type IconName } from "./components/Icon";
 
 const MapView = lazy(() => import("./components/MapView"));
 
-type Tab = "map" | "insights" | "civic" | "method";
+type Tab = "home" | "map" | "insights" | "civic" | "method";
 const TABS: { id: Tab; label: string; icon: IconName }[] = [
+  { id: "home", label: "Home", icon: "drop" },
   { id: "map", label: "Map", icon: "map" },
   { id: "insights", label: "Insights", icon: "chart" },
   { id: "civic", label: "Plan", icon: "shield" },
@@ -22,11 +24,12 @@ const TABS: { id: Tab; label: string; icon: IconName }[] = [
 ];
 const STALE_DATA_DAYS = 365;
 
-/** Deep links: #place=RG-081 or #tab=insights - shareable views for teammates and judges. */
+/** Deep links: #place=RG-081 or #tab=insights - shareable views for teammates and judges. No hash = landing page. */
 function readHash(): { tab: Tab; place: string | null } {
   const p = new URLSearchParams(window.location.hash.replace(/^#/, ""));
-  const tab = (p.get("tab") as Tab) ?? "map";
-  return { tab: TABS.some((t) => t.id === tab) ? tab : "map", place: p.get("place") };
+  const place = p.get("place");
+  const tab = (p.get("tab") as Tab) ?? (place ? "map" : "home");
+  return { tab: TABS.some((t) => t.id === tab) ? tab : "home", place };
 }
 
 function useTheme(): [boolean, () => void] {
@@ -72,7 +75,7 @@ export default function App() {
 
   // keep the URL in sync so any view can be shared
   useEffect(() => {
-    const h = selected && tab === "map" ? `#place=${selected}` : tab !== "map" ? `#tab=${tab}` : "";
+    const h = selected && tab === "map" ? `#place=${selected}` : tab !== "home" ? `#tab=${tab}` : "";
     if (window.location.hash !== h) history.replaceState(null, "", h || window.location.pathname + window.location.search);
   }, [tab, selected]);
 
@@ -226,6 +229,7 @@ export default function App() {
             )}
           </div>
         )}
+        {tab === "home" && <Home data={data} forecast={forecast} onGo={goTab} onOpen={openLocation} />}
         {tab === "insights" && <Insights data={data} />}
         {tab === "civic" && <Civic data={data} onOpen={openLocation} />}
         {tab === "method" && <Method data={data} />}

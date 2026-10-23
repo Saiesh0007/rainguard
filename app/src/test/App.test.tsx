@@ -23,16 +23,26 @@ function mockFetch(dataOk: boolean) {
 describe("App", () => {
   beforeEach(() => {
     window.matchMedia = vi.fn().mockReturnValue({ matches: false, addEventListener: vi.fn(), removeEventListener: vi.fn() });
+    history.replaceState(null, "", "/"); // the app syncs its tab to the hash; start every test on the landing page
   });
   afterEach(() => vi.unstubAllGlobals());
 
-  it("shows a loading state, then the map view with the real location count", async () => {
+  it("shows a loading state, then the landing page built from real data", async () => {
     vi.stubGlobal("fetch", mockFetch(true));
     render(<App />);
     expect(screen.getByText(/Loading evidence/)).toBeInTheDocument();
+    const d = JSON.parse(json);
+    const multi = d.locations.filter((l: { n_sources: number }) => l.n_sources >= 2).length;
+    expect(await screen.findByText(`Only ${multi} are on more than one official list.`)).toBeInTheDocument();
+  });
+
+  it("goes from the landing page to the map with the real location count", async () => {
+    vi.stubGlobal("fetch", mockFetch(true));
+    render(<App />);
+    fireEvent.click(await screen.findByRole("button", { name: /Explore the map/ }));
+    expect(await screen.findByTestId("map-stub")).toBeInTheDocument();
     const n = JSON.parse(json).locations.length;
     await waitFor(() => expect(screen.getByText(String(n))).toBeInTheDocument());
-    expect(await screen.findByTestId("map-stub")).toBeInTheDocument();
   });
 
   it("shows an error state instead of fake data when the data file fails", async () => {
@@ -50,6 +60,7 @@ describe("App", () => {
   it("lists places, opens evidence, and shows an honest empty search state", async () => {
     vi.stubGlobal("fetch", mockFetch(true));
     render(<App />);
+    fireEvent.click(await screen.findByRole("button", { name: /Explore the map/ }));
     fireEvent.click(await screen.findByRole("button", { name: "List" }));
     const first = (await screen.findAllByRole("button", { name: /Ward/ }))[0];
     fireEvent.click(first);
@@ -62,7 +73,7 @@ describe("App", () => {
   it("renders the insights, plan and method tabs from data", async () => {
     vi.stubGlobal("fetch", mockFetch(true));
     render(<App />);
-    await screen.findByTestId("map-stub");
+    await screen.findByText(/Three questions, one screen each/);
     fireEvent.click(screen.getByRole("button", { name: /Insights/ }));
     expect(await screen.findByText("F1", { exact: false })).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: /Plan/ }));
